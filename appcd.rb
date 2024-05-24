@@ -10,16 +10,16 @@ class Appcd < Formula
 
   on_macos do
     on_intel do
-      url "https://github.com/appcd-dev/appcd/releases/download/v0.15.4/appcd_0.15.4_darwin_amd64.tar.gz"
-      sha256 "a257d3df4eaa1153e684e554f37e7895fa2db904f9573765137127eeb2770b28"
+      url "https://appcd-public-releases.s3.us-east-2.amazonaws.com/binaries/v0.15.4/appcd_0.15.4_darwin_amd64.tar.gz"
+      sha256 "26ed9450924b94d79fc7f78441398b5f2b52f95b4a0d94c811dc16c6cc432e1b"
 
       def install
         bin.install "appcd"
       end
     end
     on_arm do
-      url "https://github.com/appcd-dev/appcd/releases/download/v0.15.4/appcd_0.15.4_darwin_arm64.tar.gz"
-      sha256 "9137818717e2dc8357d03f748a289b98643bd2a8378ca3ebc65589fb74e4d5cc"
+      url "https://appcd-public-releases.s3.us-east-2.amazonaws.com/binaries/v0.15.4/appcd_0.15.4_darwin_arm64.tar.gz"
+      sha256 "405e84ed7751892c6a0f1e8da6499c30492bfe56507444b7f78237c6dfb4395a"
 
       def install
         bin.install "appcd"
@@ -30,8 +30,8 @@ class Appcd < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/appcd-dev/appcd/releases/download/v0.15.4/appcd_0.15.4_linux_amd64.tar.gz"
-        sha256 "0d88cb1e3d7f51752f342690a4437651aad1f31a4f89cc7f92e4b6ae3ed7fbc6"
+        url "https://appcd-public-releases.s3.us-east-2.amazonaws.com/binaries/v0.15.4/appcd_0.15.4_linux_amd64.tar.gz"
+        sha256 "2419766f7d78eda97986e0ead7da8c6c679ebd00278493b3513876bd3d1f4edc"
 
         def install
           bin.install "appcd"
@@ -40,8 +40,8 @@ class Appcd < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/appcd-dev/appcd/releases/download/v0.15.4/appcd_0.15.4_linux_arm64.tar.gz"
-        sha256 "8a245d96348bed24dd46659e0df51d789460ab022bb1b6d9fa60ccb2a98d470a"
+        url "https://appcd-public-releases.s3.us-east-2.amazonaws.com/binaries/v0.15.4/appcd_0.15.4_linux_arm64.tar.gz"
+        sha256 "51d5b72d04ab2b517bb480cbbbc01b82e40dfa7fec0eef4330a716222ab17d7b"
 
         def install
           bin.install "appcd"
