@@ -33,13 +33,35 @@ Follow these steps to install AppCd using Homebrew:
 
      This should display the version of AppCd installed on your system.
 
-## Configuration
+## Configuring
+
+### Using our cloud service
 
 To configure AppCd, you need to set your API key. Follow these steps:
 
 1. Log in to your account at <https://cloud.appcd.io/>.
 
 2. Navigate to your [personal access token settings](https://cloud.appcd.io/account-settings/pat/).
+
+3. Copy your API key.
+
+4. Run the following command in your terminal to set the API key:
+
+     ```shell
+     export APPCD_TOKEN=<YOUR_API_KEY>
+     ```
+
+     Replace `<YOUR_API_KEY>` with your actual API key.
+
+### Using on-premises installation
+
+```sh
+export APPCD_URL="https://appcd.<acme.org>"
+```
+
+1. Log in to your account at <https://appcd.acme.org/>.
+
+2. Navigate to your personal access token settings @ <https://appcd.acme.org/account-settings/pat/>.
 
 3. Copy your API key.
 
