@@ -1,6 +1,6 @@
-# AppCd Homebrew Installation
+# appCD Homebrew Installation
 
-This guide will walk you through the steps to install AppCd using Homebrew.
+This guide will walk you through the steps to install appCD using Homebrew.
 
 ## Prerequisites
 
@@ -15,11 +15,11 @@ Before you begin, make sure you have the following:
 
 ## Installation
 
-Follow these steps to install AppCd using Homebrew:
+Follow these steps to install appCD using Homebrew:
 
 1. Open your terminal.
 
-2. Run the following command to add the AppCd tap:
+2. Run the following command to add the appCD tap:
 
      ```shell
      brew install appcd-dev/homebrew-appcd/appcd
@@ -31,13 +31,13 @@ Follow these steps to install AppCd using Homebrew:
      appcd version
      ```
 
-     This should display the version of AppCd installed on your system.
+     This should display the version of appCD installed on your system.
 
 ## Configuring
 
 ### Using our cloud service
 
-To configure AppCd, you need to set your API key. Follow these steps:
+To configure appCD, you need to set your API key. Follow these steps:
 
 1. Log in to your account at <https://cloud.appcd.io/>.
 
@@ -75,4 +75,4 @@ export APPCD_URL="https://appcd.<acme.org>"
 
 ## Usage
 
-You can now start using AppCd. Run the following command to see the available commands:
+You can now start using appCD. Run the following command to see the available commands:
