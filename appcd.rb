@@ -11,7 +11,7 @@ class Appcd < Formula
   on_macos do
     on_intel do
       url "https://appcd-public-releases.s3.us-east-2.amazonaws.com/binaries/v0.15.8/appcd_0.15.8_darwin_amd64.tar.gz"
-      sha256 "cd47cc47f65a018c11c872eb60adbff2c81e82cd77b945a29ea2aaef5f563804"
+      sha256 "d2b0f03e6de7e99773f42043047ed0cd61e932f3ac8967cfab3517c001d2933b"
 
       def install
         bin.install "appcd"
@@ -19,7 +19,7 @@ class Appcd < Formula
     end
     on_arm do
       url "https://appcd-public-releases.s3.us-east-2.amazonaws.com/binaries/v0.15.8/appcd_0.15.8_darwin_arm64.tar.gz"
-      sha256 "4458afa3f042734855276701e56a4d095f5bc6312a25652ed17f3fc2f73b8068"
+      sha256 "f4344026b50be4c9991a1b85137f46442b0b0ba484dec2c079b1d910682e5f6d"
 
       def install
         bin.install "appcd"
@@ -31,7 +31,7 @@ class Appcd < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://appcd-public-releases.s3.us-east-2.amazonaws.com/binaries/v0.15.8/appcd_0.15.8_linux_amd64.tar.gz"
-        sha256 "92d49ecfaca18d34c560de58f39cee4c62c9c5875474a557f9e396e3aaa1c944"
+        sha256 "17d70e35c16d0d4913833101326b2be959d9cf7058db00dd9d84f955b9593a02"
 
         def install
           bin.install "appcd"
@@ -41,7 +41,7 @@ class Appcd < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://appcd-public-releases.s3.us-east-2.amazonaws.com/binaries/v0.15.8/appcd_0.15.8_linux_arm64.tar.gz"
-        sha256 "b04fb2994cea9c38485c5ee5f7067467034404826688052e0d7b5d5fd33036fa"
+        sha256 "73d525bc7600cceb9c8e4ea38f302975110c976c82eb4c7542d1af9e19010aef"
 
         def install
           bin.install "appcd"
