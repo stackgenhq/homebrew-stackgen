@@ -5,21 +5,21 @@
 class Appcd < Formula
   desc "Generative Infrastructure from Code"
   homepage "https://appcd.com/"
-  version "0.18.2"
+  version "0.18.3"
   license "Apache License 2.0"
 
   on_macos do
     on_intel do
-      url "https://appcd-public-releases.s3.us-east-2.amazonaws.com/binaries/v0.18.2/appcd_0.18.2_darwin_amd64.tar.gz"
-      sha256 "b2d25499ca55aa9bd130c3c0033f7fc1dfd46d6dcc4f7d39f1de0c1b74fdc745"
+      url "https://appcd-public-releases.s3.us-east-2.amazonaws.com/binaries/v0.18.3/appcd_0.18.3_darwin_amd64.tar.gz"
+      sha256 "458dbe68c1640e6b51dd3a553982e833785674804d1283f1b26a153678169ecb"
 
       def install
         bin.install "appcd"
       end
     end
     on_arm do
-      url "https://appcd-public-releases.s3.us-east-2.amazonaws.com/binaries/v0.18.2/appcd_0.18.2_darwin_arm64.tar.gz"
-      sha256 "ca31b90f102ac93df16d58c3cd4762fadbe89e8651f02690b50d4b527eebe16e"
+      url "https://appcd-public-releases.s3.us-east-2.amazonaws.com/binaries/v0.18.3/appcd_0.18.3_darwin_arm64.tar.gz"
+      sha256 "dc675d65b2f1c0b062262b0be933b7df1e98eb15e5d0cb6118bd04a71622edc6"
 
       def install
         bin.install "appcd"
@@ -30,8 +30,8 @@ class Appcd < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://appcd-public-releases.s3.us-east-2.amazonaws.com/binaries/v0.18.2/appcd_0.18.2_linux_amd64.tar.gz"
-        sha256 "227dc2d6b28e808b9354a602c1e27ab32347665aac2bf1fb863861e8648b0772"
+        url "https://appcd-public-releases.s3.us-east-2.amazonaws.com/binaries/v0.18.3/appcd_0.18.3_linux_amd64.tar.gz"
+        sha256 "e38ec10a28d3db02ecefd878b3b3944a6c185887330cf23cd90b4022f9de7c55"
 
         def install
           bin.install "appcd"
@@ -40,8 +40,8 @@ class Appcd < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://appcd-public-releases.s3.us-east-2.amazonaws.com/binaries/v0.18.2/appcd_0.18.2_linux_arm64.tar.gz"
-        sha256 "4aa53e98a3e30ed989b8d2042893417b26291e9be0d5bee6aeeeb51a3af1797d"
+        url "https://appcd-public-releases.s3.us-east-2.amazonaws.com/binaries/v0.18.3/appcd_0.18.3_linux_arm64.tar.gz"
+        sha256 "11679e23a1266d85ba23d80950574bcefe709e8331e5d42ad862147b0c117d4e"
 
         def install
           bin.install "appcd"
