@@ -22,7 +22,7 @@ Follow these steps to install `stackgen` using Homebrew:
 2. Run the following command to add the stackgen tap:
 
      ```shell
-     brew install appcd-dev/homebrew-stackgen/stackgen
+     brew install stackgenhq/homebrew-stackgen/stackgen
      ```
 
 3. After the installation is complete, you can verify the installation by running the following command:
