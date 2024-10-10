@@ -5,21 +5,21 @@
 class Stackgen < Formula
   desc "Generative Infrastructure from Code"
   homepage "https://stackgen.com/"
-  version "0.24.6"
+  version "0.24.8"
   license "Apache License 2.0"
 
   on_macos do
     on_intel do
-      url "https://appcd-public-releases.s3.us-east-2.amazonaws.com/binaries/v0.24.6/appcd_0.24.6_darwin_amd64.tar.gz"
-      sha256 "b5aba81caac2b7450b90e364abab93554a25e7784d809f7df2520be16995e802"
+      url "https://appcd-public-releases.s3.us-east-2.amazonaws.com/binaries/v0.24.8/appcd_0.24.8_darwin_amd64.tar.gz"
+      sha256 "d51898e3a3f3bebb7b8fb6bc1b89a7aa7cb69d95837cf9400ee404c86af9a7ad"
 
       def install
         bin.install "stackgen"
       end
     end
     on_arm do
-      url "https://appcd-public-releases.s3.us-east-2.amazonaws.com/binaries/v0.24.6/appcd_0.24.6_darwin_arm64.tar.gz"
-      sha256 "5386e105869d6edb97bd2b8c4fdfeb8c919595a471a7bd644397f162956e23e3"
+      url "https://appcd-public-releases.s3.us-east-2.amazonaws.com/binaries/v0.24.8/appcd_0.24.8_darwin_arm64.tar.gz"
+      sha256 "79fbd2a4a07d8e715be33908239a32df5c0903c15bfdc8a561c2519a8e490cbf"
 
       def install
         bin.install "stackgen"
@@ -30,8 +30,8 @@ class Stackgen < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://appcd-public-releases.s3.us-east-2.amazonaws.com/binaries/v0.24.6/appcd_0.24.6_linux_amd64.tar.gz"
-        sha256 "7783edae815b5c524a6dfb573c94e835d00a1a45821f9128203e4117cb96c5fa"
+        url "https://appcd-public-releases.s3.us-east-2.amazonaws.com/binaries/v0.24.8/appcd_0.24.8_linux_amd64.tar.gz"
+        sha256 "0c58896e7a254d5aac897542a6590319cc8db25542485c7d366a1bd749119f67"
 
         def install
           bin.install "stackgen"
@@ -40,8 +40,8 @@ class Stackgen < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://appcd-public-releases.s3.us-east-2.amazonaws.com/binaries/v0.24.6/appcd_0.24.6_linux_arm64.tar.gz"
-        sha256 "6948c7480683b8db8a8fb50e5b72d298913c0c85a452689a2da12d2d4b5faa0c"
+        url "https://appcd-public-releases.s3.us-east-2.amazonaws.com/binaries/v0.24.8/appcd_0.24.8_linux_arm64.tar.gz"
+        sha256 "826959a491c38eb5fd897a6872ddcb42484de4172fceaf38168e3b4647189a1c"
 
         def install
           bin.install "stackgen"
