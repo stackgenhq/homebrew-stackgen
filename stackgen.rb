@@ -5,21 +5,21 @@
 class Stackgen < Formula
   desc "Generative Infrastructure from Code"
   homepage "https://stackgen.com/"
-  version "0.24.8"
+  version "0.24.10"
   license "Apache License 2.0"
 
   on_macos do
     on_intel do
-      url "https://appcd-public-releases.s3.us-east-2.amazonaws.com/binaries/v0.24.8/appcd_0.24.8_darwin_amd64.tar.gz"
-      sha256 "d51898e3a3f3bebb7b8fb6bc1b89a7aa7cb69d95837cf9400ee404c86af9a7ad"
+      url "https://releases.stackgen.com/binaries/v0.24.10/appcd_0.24.10_darwin_amd64.tar.gz"
+      sha256 "ad73b1ab370e1a5df25d51426de8f927baa4b58536995f9423ccae2b407cb49d"
 
       def install
         bin.install "stackgen"
       end
     end
     on_arm do
-      url "https://appcd-public-releases.s3.us-east-2.amazonaws.com/binaries/v0.24.8/appcd_0.24.8_darwin_arm64.tar.gz"
-      sha256 "79fbd2a4a07d8e715be33908239a32df5c0903c15bfdc8a561c2519a8e490cbf"
+      url "https://releases.stackgen.com/binaries/v0.24.10/appcd_0.24.10_darwin_arm64.tar.gz"
+      sha256 "02c0f6334ea80ec1b07914db18ea1ef815c144010f0b191b19a682d409821a35"
 
       def install
         bin.install "stackgen"
@@ -30,8 +30,8 @@ class Stackgen < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://appcd-public-releases.s3.us-east-2.amazonaws.com/binaries/v0.24.8/appcd_0.24.8_linux_amd64.tar.gz"
-        sha256 "0c58896e7a254d5aac897542a6590319cc8db25542485c7d366a1bd749119f67"
+        url "https://releases.stackgen.com/binaries/v0.24.10/appcd_0.24.10_linux_amd64.tar.gz"
+        sha256 "e20022a06982693464278ed42b67503d4dada589f9964ca097510cbad8aa148e"
 
         def install
           bin.install "stackgen"
@@ -40,8 +40,8 @@ class Stackgen < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://appcd-public-releases.s3.us-east-2.amazonaws.com/binaries/v0.24.8/appcd_0.24.8_linux_arm64.tar.gz"
-        sha256 "826959a491c38eb5fd897a6872ddcb42484de4172fceaf38168e3b4647189a1c"
+        url "https://releases.stackgen.com/binaries/v0.24.10/appcd_0.24.10_linux_arm64.tar.gz"
+        sha256 "2c6a0d798a6d357d39833cb53ca3bf17171c58bc40ca6aad227d0fd0814637fa"
 
         def install
           bin.install "stackgen"
