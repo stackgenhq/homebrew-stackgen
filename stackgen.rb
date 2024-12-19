@@ -5,21 +5,21 @@
 class Stackgen < Formula
   desc "Generative Infrastructure from Code"
   homepage "https://stackgen.com/"
-  version "0.35.3"
+  version "0.35.4"
   license "Apache License 2.0"
 
   on_macos do
-    on_intel do
-      url "https://releases.stackgen.com/binaries/v0.35.3/appcd_0.35.3_darwin_amd64.tar.gz"
-      sha256 "5976af302679c634c32058040d91d5669d3f00608090cd6c6cec4568a7014de0"
+    if Hardware::CPU.intel?
+      url "https://releases.stackgen.com/binaries/v0.35.4/appcd_0.35.4_darwin_amd64.tar.gz"
+      sha256 "5048d7780dd8d85a89d11e30fccc85a3321e2ddfdb5648f55ca5d10ee5431003"
 
       def install
         bin.install "stackgen"
       end
     end
-    on_arm do
-      url "https://releases.stackgen.com/binaries/v0.35.3/appcd_0.35.3_darwin_arm64.tar.gz"
-      sha256 "d80ebbaa532d42cefb3f7ba86f17d84f4c6b45ba19b32b08f7d0548eb2b0ea46"
+    if Hardware::CPU.arm?
+      url "https://releases.stackgen.com/binaries/v0.35.4/appcd_0.35.4_darwin_arm64.tar.gz"
+      sha256 "d385c4edfe625ba2d0289bb2c33611f2ee06b90ef73af6526bfe519d1e3e991c"
 
       def install
         bin.install "stackgen"
@@ -28,20 +28,20 @@ class Stackgen < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://releases.stackgen.com/binaries/v0.35.3/appcd_0.35.3_linux_amd64.tar.gz"
-        sha256 "d412d153c5f214d0466939e5183e5f94c0553adc507a14258d22be7672c208e1"
+        url "https://releases.stackgen.com/binaries/v0.35.4/appcd_0.35.4_linux_amd64.tar.gz"
+        sha256 "a32a411c1ce284ae1a495e344e6c340087263bfe36051cf47ae2ce3a66b5c0c5"
 
         def install
           bin.install "stackgen"
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://releases.stackgen.com/binaries/v0.35.3/appcd_0.35.3_linux_arm64.tar.gz"
-        sha256 "3e11cca2d5b7fb4b80b3cb16d939e4f8d3a8140e93363e6caaae4cc99074cf6a"
+        url "https://releases.stackgen.com/binaries/v0.35.4/appcd_0.35.4_linux_arm64.tar.gz"
+        sha256 "1b7abf48d22d4724ae09cea449e5191a9d5983c5e4e0d5f8d18d8705b4f72365"
 
         def install
           bin.install "stackgen"
