@@ -5,21 +5,21 @@
 class Stackgen < Formula
   desc "Generative Infrastructure from Code"
   homepage "https://stackgen.com/"
-  version "0.43.1"
+  version "0.43.2"
   license "Apache License 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://releases.stackgen.com/binaries/v0.43.1/appcd_0.43.1_darwin_amd64.tar.gz"
-      sha256 "fb3a41be1cd46525fdae5d7f97a163799d980d5cdefde2777a79d2a8b522135a"
+      url "https://releases.stackgen.com/binaries/v0.43.2/appcd_0.43.2_darwin_amd64.tar.gz"
+      sha256 "cc806c279aa75095328ebaf2c02c42f0e53b12cd98077b42394d174381bf546e"
 
       def install
         bin.install "stackgen"
       end
     end
     if Hardware::CPU.arm?
-      url "https://releases.stackgen.com/binaries/v0.43.1/appcd_0.43.1_darwin_arm64.tar.gz"
-      sha256 "a7613e634030e8178e766cebb605b9f6214e8fe22041210667a9aa15cd0ef49f"
+      url "https://releases.stackgen.com/binaries/v0.43.2/appcd_0.43.2_darwin_arm64.tar.gz"
+      sha256 "0ed2201f43d5434ebf11af1e312a9bb9a01422d7c486dcca0ab4b2b29109718a"
 
       def install
         bin.install "stackgen"
@@ -30,8 +30,8 @@ class Stackgen < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://releases.stackgen.com/binaries/v0.43.1/appcd_0.43.1_linux_amd64.tar.gz"
-        sha256 "0826ba788504489ee1a0748c92cc738735a79519861cf1f2eac31bd47ebadc66"
+        url "https://releases.stackgen.com/binaries/v0.43.2/appcd_0.43.2_linux_amd64.tar.gz"
+        sha256 "1ebff21ceee5ad9bf1d8e47b002eae7a4c2a3d8401582d42a7fc77c56bea1c8f"
 
         def install
           bin.install "stackgen"
@@ -40,8 +40,8 @@ class Stackgen < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://releases.stackgen.com/binaries/v0.43.1/appcd_0.43.1_linux_arm64.tar.gz"
-        sha256 "4397eb74c7f4fe537f559bfbb59ddcb948437a2be1c9b0e891f357d09806383b"
+        url "https://releases.stackgen.com/binaries/v0.43.2/appcd_0.43.2_linux_arm64.tar.gz"
+        sha256 "92d74ece4b8d3f30b370cbf6f88af869e13c2969eb7d12ef9e5f83c32c1cbb61"
 
         def install
           bin.install "stackgen"
