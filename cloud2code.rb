@@ -5,21 +5,13 @@
 class Cloud2code < Formula
   desc "Convert your cloud resources to tfstate files"
   homepage "https://stackgen.com/"
-  version "0.1.2"
+  version "0.1.5"
   license "Proprietary"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://releases.stackgen.com/binaries/v0.1.2/cloud2code_0.1.2_darwin_amd64.tar.gz"
-      sha256 "18b184fd195780dd9a48e6f8d829b94010da354a8bf47b1f2e996ff362eba543"
-
-      def install
-        bin.install "cloud2code"
-      end
-    end
     if Hardware::CPU.arm?
-      url "https://releases.stackgen.com/binaries/v0.1.2/cloud2code_0.1.2_darwin_arm64.tar.gz"
-      sha256 "21ee1d0a33023f31c41279e22e4febfe2e57424dbc7e40c6bd9b39ca9bedf287"
+      url "https://releases.stackgen.com/binaries/v0.1.5/cloud2code_0.1.5_darwin_arm64.tar.gz"
+      sha256 "73a6314848827b0fe41c8ecf8d9bb4a86416f86430b3f846b506a5bf0272fda5"
 
       def install
         bin.install "cloud2code"
@@ -28,20 +20,10 @@ class Cloud2code < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://releases.stackgen.com/binaries/v0.1.2/cloud2code_0.1.2_linux_amd64.tar.gz"
-        sha256 "5c0bee80ad916374b1c3634cf7042ac8448aab6a035ac95f723e95445caa67dc"
-
-        def install
-          bin.install "cloud2code"
-        end
-      end
-    end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://releases.stackgen.com/binaries/v0.1.2/cloud2code_0.1.2_linux_arm64.tar.gz"
-        sha256 "ca2ef5ebb80d68391d6199652b14f8862228c795e2d268b810d70d380408d696"
+        url "https://releases.stackgen.com/binaries/v0.1.5/cloud2code_0.1.5_linux_arm64.tar.gz"
+        sha256 "856339c749905cc83fd7544352e0056579a0a79201171d277b22361221b9d241"
 
         def install
           bin.install "cloud2code"
