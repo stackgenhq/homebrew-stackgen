@@ -11,7 +11,7 @@ class Cloud2code < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://releases.stackgen.com/binaries/v0.1.5/cloud2code_0.1.5_darwin_arm64.tar.gz"
-      sha256 "73a6314848827b0fe41c8ecf8d9bb4a86416f86430b3f846b506a5bf0272fda5"
+      sha256 "410679c8b7905ef222e2d3a67f8837c06f001b6efdb0f740c31c4391c3638f16"
 
       def install
         bin.install "cloud2code"
@@ -23,7 +23,7 @@ class Cloud2code < Formula
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
         url "https://releases.stackgen.com/binaries/v0.1.5/cloud2code_0.1.5_linux_arm64.tar.gz"
-        sha256 "856339c749905cc83fd7544352e0056579a0a79201171d277b22361221b9d241"
+        sha256 "83f47fb65aaabd370c4324fc91f9ff2cb97f1f8fcd2c46f6c5db768750d2a919"
 
         def install
           bin.install "cloud2code"
