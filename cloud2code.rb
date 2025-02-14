@@ -9,21 +9,29 @@ class Cloud2code < Formula
   license "Proprietary"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://releases.stackgen.com/binaries/v0.1.5/cloud2code_0.1.5_darwin_arm64.tar.gz"
-      sha256 "410679c8b7905ef222e2d3a67f8837c06f001b6efdb0f740c31c4391c3638f16"
+    url "https://releases.stackgen.com/binaries/v0.1.5/cloud2code_0.1.5_darwin_amd64.tar.gz"
+    sha256 "c0af7cd3684a8553c9c8a27a8d01a878f13bdc08be717c01d7705ee3177a2985"
 
-      def install
-        bin.install "cloud2code"
+    def install
+      bin.install "cloud2code"
+    end
+
+    if Hardware::CPU.arm?
+      def caveats
+        <<~EOS
+          The darwin_arm64 architecture is not supported for the Cloud2code
+          formula at this time. The darwin_amd64 binary may work in compatibility
+          mode, but it might not be fully supported.
+        EOS
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm?
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://releases.stackgen.com/binaries/v0.1.5/cloud2code_0.1.5_linux_arm64.tar.gz"
-        sha256 "83f47fb65aaabd370c4324fc91f9ff2cb97f1f8fcd2c46f6c5db768750d2a919"
+        url "https://releases.stackgen.com/binaries/v0.1.5/cloud2code_0.1.5_linux_amd64.tar.gz"
+        sha256 "4281f7c6fa381898eecc23fbf3f2f9697746ae557f87e1c8e8dfa47ee8a3895f"
 
         def install
           bin.install "cloud2code"
