@@ -9,9 +9,17 @@ class Cloud2code < Formula
   license "Proprietary"
 
   on_macos do
+    if Hardware::CPU.intel?
+      url "https://releases.stackgen.com/binaries/v0.1.5/cloud2code_0.1.5_darwin_amd64.tar.gz"
+      sha256 "c7937f4d8dba1d46d8da1f5b181f0b2283778d84e19c7c470d957238d760eca9"
+
+      def install
+        bin.install "cloud2code"
+      end
+    end
     if Hardware::CPU.arm?
       url "https://releases.stackgen.com/binaries/v0.1.5/cloud2code_0.1.5_darwin_arm64.tar.gz"
-      sha256 "68a04ecabed67f7be03174fb88158f64d188addbd4b7c01537bda320a1e80fa5"
+      sha256 "d56e6db4bf05b92245f7454c74331c77ea209f584847cc8fdae457eaf932c4f5"
 
       def install
         bin.install "cloud2code"
@@ -20,10 +28,20 @@ class Cloud2code < Formula
   end
 
   on_linux do
+    if Hardware::CPU.intel?
+      if Hardware::CPU.is_64_bit?
+        url "https://releases.stackgen.com/binaries/v0.1.5/cloud2code_0.1.5_linux_amd64.tar.gz"
+        sha256 "dd9ca6ba63fc4a03b5332e90f5beef67514f2890153e3bb9f889a35f34116bf4"
+
+        def install
+          bin.install "cloud2code"
+        end
+      end
+    end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
         url "https://releases.stackgen.com/binaries/v0.1.5/cloud2code_0.1.5_linux_arm64.tar.gz"
-        sha256 "2f953a4bea4ea9ef5888a0c12efd7bb72bf5bff02dd595c56763139b01ca6b73"
+        sha256 "3213ed2d014fe211eb3e85953abb1b97b4c353b901af1156ad8d39a5252514d7"
 
         def install
           bin.install "cloud2code"
