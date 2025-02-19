@@ -5,21 +5,21 @@
 class Cloud2code < Formula
   desc "Convert your cloud resources to tfstate files"
   homepage "https://stackgen.com/"
-  version "0.1.12"
+  version "0.1.13"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://releases.stackgen.com/binaries/v0.1.12/cloud2code_0.1.12_darwin_amd64.tar.gz"
-      sha256 "6a4264410b9d48cc6d307001c7c39008d3c5070dc0eac98a25b30884309265f7"
+      url "https://releases.stackgen.com/binaries/v0.1.13/cloud2code_0.1.13_darwin_amd64.tar.gz"
+      sha256 "04e484a78f002767edd4d9eff2a192e5ac3caa789b082d4a658e38606eae6175"
 
       def install
         bin.install "cloud2code"
       end
     end
     if Hardware::CPU.arm?
-      url "https://releases.stackgen.com/binaries/v0.1.12/cloud2code_0.1.12_darwin_arm64.tar.gz"
-      sha256 "b38afa951d19ec1957409f7887955454735a9bfd43b2f08c33766630ebe96467"
+      url "https://releases.stackgen.com/binaries/v0.1.13/cloud2code_0.1.13_darwin_arm64.tar.gz"
+      sha256 "80fe6618217cf3ad2bc3759a661f4828b7c5418351747832ae221c4cc318cdae"
 
       def install
         bin.install "cloud2code"
@@ -30,8 +30,8 @@ class Cloud2code < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://releases.stackgen.com/binaries/v0.1.12/cloud2code_0.1.12_linux_amd64.tar.gz"
-        sha256 "b97f557f2c03dc6e5c86f158acf986ca85426a6d7ab5ff6cf6a9a15d6d73e526"
+        url "https://releases.stackgen.com/binaries/v0.1.13/cloud2code_0.1.13_linux_amd64.tar.gz"
+        sha256 "494c4209d8b8265619514ef8ff4606a971db3e369f0f173efac8e4f42be9c0e6"
 
         def install
           bin.install "cloud2code"
@@ -40,8 +40,8 @@ class Cloud2code < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://releases.stackgen.com/binaries/v0.1.12/cloud2code_0.1.12_linux_arm64.tar.gz"
-        sha256 "2a7194c7e45ad1653b1c7af73d210a0a5aa855a4186fdd97acfc15cd2bce8984"
+        url "https://releases.stackgen.com/binaries/v0.1.13/cloud2code_0.1.13_linux_arm64.tar.gz"
+        sha256 "9ce5a2ff7787c0cbe43b08ae6cedd32844442987612de78d5d3624bb19edc860"
 
         def install
           bin.install "cloud2code"
