@@ -4,9 +4,11 @@ on:
   push:
     branches:
       - main
+      - feature/stackgen_dockre
     paths:
     - 'cloud2code.rb'
     - cloud2code/Dockerfile
+    - .github/workflows/cloud2code.yaml
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: stackgenhq/cloud2code
@@ -45,6 +47,9 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=raw,value=${{ steps.version.outputs.VERSION }}
+            type=raw,value=latest
       - name: Log in to the Container registry
         uses: docker/login-action@v3
         with:
