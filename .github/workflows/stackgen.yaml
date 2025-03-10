@@ -1,15 +1,16 @@
-# a pipeline to create container image on changes to cloud2code.rb file
-name: cloud2code
+# a pipeline to create container image on changes to stackgen.rb file
+name: stackgen
 on:
   push:
     branches:
       - main
+      - feature/stackgen_dockre
     paths:
-    - 'cloud2code.rb'
-    - cloud2code/Dockerfile
+    - 'stackgen.rb'
+    - stackgen/Dockerfile
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: stackgenhq/cloud2code
+  IMAGE_NAME: stackgenhq/stackgen
 jobs:
   build:
     permissions:
@@ -30,12 +31,12 @@ jobs:
         with:
           fetch-depth: 1
           sparse-checkout: |
-            cloud2code
-            cloud2code.rb
-      - name: Get cloud2code version
+            stackgen
+            stackgen.rb
+      - name: Get stackgen version
         id: version
         run: |
-          echo "VERSION=$(grep 'version' cloud2code.rb | awk '{print $NF}' | tr -d '"')" >> $GITHUB_OUTPUT
+          echo "VERSION=$(grep 'version' stackgen.rb | awk '{print $NF}' | tr -d '"')" >> $GITHUB_OUTPUT
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
       - name: Set up Docker Buildx
@@ -54,12 +55,12 @@ jobs:
       - name: Docker Build and push
         uses: docker/build-push-action@v6
         with:
-          context: ./cloud2code
+          context: ./stackgen
           platforms: ${{ matrix.platform }}
           tags: ${{ steps.meta.outputs.tags }}
           push: true
           provenance: false
           labels: ${{ steps.meta.outputs.labels }}
           build-args: |-
-            CLOUD2CODE_VERSION=${{ steps.version.outputs.VERSION }}
+            STACKGEN_VERSION=${{ steps.version.outputs.VERSION }}
 
