@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - feature/stackgen_dockre
     paths:
     - 'stackgen.rb'
     - stackgen/Dockerfile

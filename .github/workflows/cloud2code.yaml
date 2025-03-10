@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - feature/stackgen_dockre
     paths:
     - 'cloud2code.rb'
     - cloud2code/Dockerfile
