@@ -5,21 +5,21 @@
 class Stackgen < Formula
   desc "Generative Infrastructure from Code"
   homepage "https://stackgen.com/"
-  version "0.53.3"
+  version "0.54.0"
   license "Apache License 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://releases.stackgen.com/binaries/v0.53.3/appcd_0.53.3_darwin_amd64.tar.gz"
-      sha256 "8786d72e26d64f8cfd2d919336897ece2afe75090b933ef8d37db04f385ba17b"
+      url "https://releases.stackgen.com/binaries/v0.54.0/appcd_0.54.0_darwin_amd64.tar.gz"
+      sha256 "442c12569279144b103da4f2a5974b69c1a337719d540562bc578b80e9fbd0c7"
 
       def install
         bin.install "stackgen"
       end
     end
     if Hardware::CPU.arm?
-      url "https://releases.stackgen.com/binaries/v0.53.3/appcd_0.53.3_darwin_arm64.tar.gz"
-      sha256 "3f2509c9455fbb350afc26f70d217045ff216d72dd12f62c50ba9b045047c400"
+      url "https://releases.stackgen.com/binaries/v0.54.0/appcd_0.54.0_darwin_arm64.tar.gz"
+      sha256 "bec929692edd40626bda0203309045aa34dfe043f215ed02a66219b006cd1cb8"
 
       def install
         bin.install "stackgen"
@@ -28,24 +28,18 @@ class Stackgen < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://releases.stackgen.com/binaries/v0.53.3/appcd_0.53.3_linux_amd64.tar.gz"
-        sha256 "9412ef61e07d3c47eace4ecccd3ab4d14674fd819050078ce0e3a9ee7a124b14"
-
-        def install
-          bin.install "stackgen"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://releases.stackgen.com/binaries/v0.54.0/appcd_0.54.0_linux_amd64.tar.gz"
+      sha256 "d9acf94651eafa8827cb4605225ad33e1bea3d7f32cb32e7968e422a48e937e1"
+      def install
+        bin.install "stackgen"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://releases.stackgen.com/binaries/v0.53.3/appcd_0.53.3_linux_arm64.tar.gz"
-        sha256 "8f49ad01fe6ecfbe1cd5416c78d8b4595bad15a9f4da258abf0710690f5acd00"
-
-        def install
-          bin.install "stackgen"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://releases.stackgen.com/binaries/v0.54.0/appcd_0.54.0_linux_arm64.tar.gz"
+      sha256 "55758da924a597e523c9b6adaa1eac056c122b4ed25b6c20bd13171e57e60e10"
+      def install
+        bin.install "stackgen"
       end
     end
   end
