@@ -11,7 +11,7 @@ class Stackgen < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://releases.stackgen.com/binaries/v0.58.0/appcd_0.58.0_darwin_amd64.tar.gz"
-      sha256 "2d8c05fd8debd4e5b3dcb2e09205f0ad4e9adf1a62b9b369b72ea90ae6fd34df"
+      sha256 "60f18544033b73036b18aac5b9a8a3eb1177ab7833679a1cd71632347d2e9c5c"
 
       def install
         bin.install "stackgen"
@@ -19,7 +19,7 @@ class Stackgen < Formula
     end
     if Hardware::CPU.arm?
       url "https://releases.stackgen.com/binaries/v0.58.0/appcd_0.58.0_darwin_arm64.tar.gz"
-      sha256 "799a35ab153b953ddd8c32b944536d8bfa13f31069cb86117b792f2c32e5843e"
+      sha256 "7eef52a5c542af172bee491f2055df54474159c6da9d290402c7cd60998e4a54"
 
       def install
         bin.install "stackgen"
@@ -30,14 +30,14 @@ class Stackgen < Formula
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
       url "https://releases.stackgen.com/binaries/v0.58.0/appcd_0.58.0_linux_amd64.tar.gz"
-      sha256 "1d349e669cf29d89b657563cdf81793cd1b311de45ffd9cf21a72aaf8e531273"
+      sha256 "79f7992ee1b927185ab29af701b55514ea472367b164daaceb46d62dc220cd7b"
       def install
         bin.install "stackgen"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
       url "https://releases.stackgen.com/binaries/v0.58.0/appcd_0.58.0_linux_arm64.tar.gz"
-      sha256 "8baa694cda087200626c64f388f6eb1ba5372c0c45c30cde3b6b397b8c0c8d10"
+      sha256 "a91f68a986aad0d46db9dc5fe3490751c0bf426dcb31b01a028a3eaa34efb990"
       def install
         bin.install "stackgen"
       end
