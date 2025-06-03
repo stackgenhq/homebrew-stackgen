@@ -5,21 +5,21 @@
 class Stackgen < Formula
   desc "Generative Infrastructure from Code"
   homepage "https://stackgen.com/"
-  version "0.58.2"
+  version "0.59.0"
   license "Apache License 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://releases.stackgen.com/binaries/v0.58.2/appcd_0.58.2_darwin_amd64.tar.gz"
-      sha256 "f37d85823e4f4f6397f6f3aa901b79e14662f7d1d6cb5cf5a4f707509c47bf62"
+      url "https://releases.stackgen.com/binaries/v0.59.0/appcd_0.59.0_darwin_amd64.tar.gz"
+      sha256 "e75c7c643d68c85f5f454452d457b6f739ad6ace54024dad4da36f2ea8743d81"
 
       def install
         bin.install "stackgen"
       end
     end
     if Hardware::CPU.arm?
-      url "https://releases.stackgen.com/binaries/v0.58.2/appcd_0.58.2_darwin_arm64.tar.gz"
-      sha256 "b6ec18580873f66cf332122060e9728653fc8f73250da01391ce190f4e92b276"
+      url "https://releases.stackgen.com/binaries/v0.59.0/appcd_0.59.0_darwin_arm64.tar.gz"
+      sha256 "fe9a383d1a1e89b6c25e3da618f327cafa17bb174ce89d3aceee47d4de923bea"
 
       def install
         bin.install "stackgen"
@@ -29,15 +29,15 @@ class Stackgen < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://releases.stackgen.com/binaries/v0.58.2/appcd_0.58.2_linux_amd64.tar.gz"
-      sha256 "c7d661e748707e7e5889b860c3813c504f6105d33367a4772c73e42e7848190e"
+      url "https://releases.stackgen.com/binaries/v0.59.0/appcd_0.59.0_linux_amd64.tar.gz"
+      sha256 "bd801a743e8f6a3e6b15bf0ee7aa8aeba0a90ef8157b247293b2a68e8b230990"
       def install
         bin.install "stackgen"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://releases.stackgen.com/binaries/v0.58.2/appcd_0.58.2_linux_arm64.tar.gz"
-      sha256 "a0cc9ce2e2a3999e6ad5646c1b6b248c3912c3d94066e27ae321d1d790e8d08c"
+      url "https://releases.stackgen.com/binaries/v0.59.0/appcd_0.59.0_linux_arm64.tar.gz"
+      sha256 "b6de0f81680a6e0e16b29b6081c17a7c279d09d650a46675ae14b358a29a5d77"
       def install
         bin.install "stackgen"
       end
