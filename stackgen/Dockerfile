@@ -10,9 +10,11 @@ RUN apk update && \
     rm -rf /var/cache/apk/*
 
 RUN wget -O stackgen.tar.gz \
-    https://releases.stackgen.com/binaries/v${STACKGEN_VERSION}/appcd_${STACKGEN_VERSION}_${TARGETOS}_${TARGETARCH}.tar.gz && \
+    https://releases.stackgen.com/binaries/v${STACKGEN_VERSION}/stackgen-cli_${STACKGEN_VERSION}_${TARGETOS}_${TARGETARCH}.tar.gz && \
     tar -xzf stackgen.tar.gz && \
     mv stackgen /tmp/stackgen
+
+FROM ghcr.io/opentofu/opentofu:minimal AS tofu
 
 FROM alpine:latest
 
@@ -23,7 +25,10 @@ RUN apk update && \
 
 USER stackgen
 
+WORKDIR /home/stackgen
+
 COPY --from=download_binary --chown=stackgen:stackgen /tmp/stackgen /usr/local/bin/stackgen
+COPY --from=tofu /usr/local/bin/tofu /usr/local/bin/tofu
 
 RUN chmod +x /usr/local/bin/stackgen
 
