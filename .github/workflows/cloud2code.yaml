@@ -15,6 +15,7 @@ jobs:
   build:
     outputs:
       image_tag: ${{ steps.meta.outputs.tags }}
+      version: ${{ steps.version.outputs.VERSION }}
     permissions:
       contents: read
       packages: write
@@ -53,6 +54,8 @@ jobs:
           tags: |
             type=raw,value=${{ steps.version.outputs.VERSION }}
             type=raw,value=latest
+          flavor: |
+            suffix=${{ matrix.tag-suffix }},onlatest=false
       - name: Log in to the Container registry
         uses: docker/login-action@v3
         with:
@@ -90,7 +93,11 @@ jobs:
       - name: Create manifest
         run: |
           docker buildx imagetools create \
-            -t ${{ needs.build.outputs.image_tag }} \
-            ${{ needs.build.outputs.image_tag }}-amd \
-            ${{ needs.build.outputs.image_tag }}-arm
+            -t ghcr.io/stackgenhq/cloud2code:latest \
+            ghcr.io/stackgenhq/cloud2code:latest-amd \
+            ghcr.io/stackgenhq/cloud2code:latest-arm
 
+          docker buildx imagetools create \
+            -t ghcr.io/stackgenhq/cloud2code:${{ needs.build.outputs.version }} \
+            ghcr.io/stackgenhq/cloud2code:${{ needs.build.outputs.version }}-amd \
+            ghcr.io/stackgenhq/cloud2code:${{ needs.build.outputs.version }}-arm
