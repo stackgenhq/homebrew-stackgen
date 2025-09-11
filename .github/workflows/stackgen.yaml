@@ -67,7 +67,7 @@ jobs:
         with:
           context: ./stackgen
           platforms: ${{ matrix.platform }}
-          tags: ${{ steps.meta.outputs.tags }}${{ matrix.tag-suffix }}
+          tags: ${{ steps.meta.outputs.tags }}
           push: true
           provenance: false
           labels: ${{ steps.meta.outputs.labels }}
