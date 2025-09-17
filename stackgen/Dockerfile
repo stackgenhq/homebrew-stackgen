@@ -23,6 +23,8 @@ RUN apk update && \
     rm -rf /var/cache/apk/* && \
     addgroup -S stackgen && adduser -S stackgen -G stackgen -u 1000 -h /home/stackgen
 
+LABEL io.modelcontextprotocol.server.name="io.github.stackgenhq/stackgen"
+
 USER stackgen
 
 WORKDIR /home/stackgen
