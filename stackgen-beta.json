@@ -1,0 +1,22 @@
+{
+    "version": "0.70.1-rc.1",
+    "architecture": {
+        "64bit": {
+            "url": "https://releases.stackgen.com/binaries/stackgen-cli/rc/v0.70.1-rc.1/stackgen-beta_0.70.1-rc.1_windows_amd64.tar.gz",
+            "bin": [
+                "stackgen-beta.exe"
+            ],
+            "hash": "ca78aea95cf9078eb2ba8273fbe9541c8e224445ecf735418d04c3c23952d434"
+        },
+        "arm64": {
+            "url": "https://releases.stackgen.com/binaries/stackgen-cli/rc/v0.70.1-rc.1/stackgen-beta_0.70.1-rc.1_windows_arm64.tar.gz",
+            "bin": [
+                "stackgen-beta.exe"
+            ],
+            "hash": "0e0df2ab1776b4e1f46a7f2e3ea1d09d135fa13458dce02db320fa6c805d34b7"
+        }
+    },
+    "homepage": "https://stackgen.com/",
+    "license": "Apache License 2.0",
+    "description": "Generative Infrastructure from Code"
+}
