@@ -10,7 +10,7 @@ RUN apk update && \
     rm -rf /var/cache/apk/*
 
 RUN wget -O stackgen.tar.gz \
-    https://releases.stackgen.com/binaries/v${STACKGEN_VERSION}/stackgen-cli_${STACKGEN_VERSION}_${TARGETOS}_${TARGETARCH}.tar.gz && \
+    https://releases.stackgen.com/binaries/stackgen-cli/v${STACKGEN_VERSION}/stackgen-cli_${STACKGEN_VERSION}_${TARGETOS}_${TARGETARCH}.tar.gz && \
     tar -xzf stackgen.tar.gz && \
     mv stackgen /tmp/stackgen
 
