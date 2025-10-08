@@ -1,0 +1,15 @@
+{
+    "version": "0.71.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://releases.stackgen.com/binaries/stackgen-cli/v0.71.0/stackgen-cli_0.71.0_windows_amd64.zip",
+            "bin": [
+                "stackgen.exe"
+            ],
+            "hash": "831b26282a8a633553f3fb280352e21c640ac69f3ace26029f286026dcf7fbb7"
+        }
+    },
+    "homepage": "https://stackgen.com/",
+    "license": "Apache License 2.0",
+    "description": "Generative Infrastructure from Code"
+}
