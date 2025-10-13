@@ -1,12 +1,12 @@
 {
-    "version": "0.71.1",
+    "version": "0.71.5",
     "architecture": {
         "64bit": {
-            "url": "https://releases.stackgen.com/binaries/stackgen-cli/v0.71.1/stackgen-cli_0.71.1_windows_amd64.zip",
+            "url": "https://releases.stackgen.com/binaries/stackgen-cli/v0.71.5/stackgen-cli_0.71.5_windows_amd64.zip",
             "bin": [
                 "stackgen.exe"
             ],
-            "hash": "2925b0ce5c1d0337c94d40c2f2c28edb0e4ce746c739b96fa3cb44603f46c5c3"
+            "hash": "19a3c311c2acf21702e3d7fb30981643f9c70dddd4ad1162359c2fce0cef2be8"
         }
     },
     "homepage": "https://stackgen.com/",
