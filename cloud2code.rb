@@ -5,21 +5,21 @@
 class Cloud2code < Formula
   desc "Convert your cloud resources to tfstate files"
   homepage "https://stackgen.com/"
-  version "0.4.1"
+  version "0.4.2"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://releases.stackgen.com/binaries/v0.4.1/cloud2code_0.4.1_darwin_amd64.tar.gz"
-      sha256 "2319a58bc0f685254d2d96f8cc56fafb43c07852e7aaa9c398b705fae6be8381"
+      url "https://releases.stackgen.com/binaries/v0.4.2/cloud2code_0.4.2_darwin_amd64.tar.gz"
+      sha256 "c71a1ea3d6aa967c25959c5c50379c94790700308b9fe97f4dd41e7e3fe52f94"
 
       def install
         bin.install "cloud2code"
       end
     end
     if Hardware::CPU.arm?
-      url "https://releases.stackgen.com/binaries/v0.4.1/cloud2code_0.4.1_darwin_arm64.tar.gz"
-      sha256 "5ee3e13908c4b9d34496a700b9b3bfed89f42a78efdfe8f90f52a6196b78254a"
+      url "https://releases.stackgen.com/binaries/v0.4.2/cloud2code_0.4.2_darwin_arm64.tar.gz"
+      sha256 "c604fb58d3806c35dcfb7950f2e979e7b7a2bf15cd9cfd6858e93049a58a79bf"
 
       def install
         bin.install "cloud2code"
@@ -29,15 +29,15 @@ class Cloud2code < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://releases.stackgen.com/binaries/v0.4.1/cloud2code_0.4.1_linux_amd64.tar.gz"
-      sha256 "702963579b921ec481fd12f8325dd88112c2670b92ecb3af177ca167c849663b"
+      url "https://releases.stackgen.com/binaries/v0.4.2/cloud2code_0.4.2_linux_amd64.tar.gz"
+      sha256 "c6f8f94ef7f571577b8899804ad89aaa6ee44942828a98f94137fb956b70e700"
       def install
         bin.install "cloud2code"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.stackgen.com/binaries/v0.4.1/cloud2code_0.4.1_linux_arm64.tar.gz"
-      sha256 "00d423ebfa522c88cdfb51c70c7438f1e100fe0a50d25aecd3f3a608188f63e2"
+      url "https://releases.stackgen.com/binaries/v0.4.2/cloud2code_0.4.2_linux_arm64.tar.gz"
+      sha256 "711771014887f929a48c1cb7ec705bcff882d659da0baf36f103e06016cc4f27"
       def install
         bin.install "cloud2code"
       end
