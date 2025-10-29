@@ -5,21 +5,21 @@
 class StackgenBeta < Formula
   desc "Generative Infrastructure from Code"
   homepage "https://stackgen.com/"
-  version "0.72.0-rc.1"
+  version "0.72.1-rc.1"
   license "Apache License 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://releases.stackgen.com/binaries/stackgen-cli/rc/v0.72.0-rc.1/stackgen-beta_0.72.0-rc.1_darwin_amd64.tar.gz"
-      sha256 "56471f3e30fcdd6e9962721e078551a0582de0bf0bcc7b9c6857c53a4a064ac3"
+      url "https://releases.stackgen.com/binaries/stackgen-cli/rc/v0.72.1-rc.1/stackgen-beta_0.72.1-rc.1_darwin_amd64.tar.gz"
+      sha256 "74766e54470010a87256b47db4ac20bcbb90c41217ed234d895d40c28b30b869"
 
       def install
         bin.install "stackgen-beta"
       end
     end
     if Hardware::CPU.arm?
-      url "https://releases.stackgen.com/binaries/stackgen-cli/rc/v0.72.0-rc.1/stackgen-beta_0.72.0-rc.1_darwin_arm64.tar.gz"
-      sha256 "ed7aadc2e23f3039427cd7e2bbe68d1760eb425b95827559a46ad9bb171889ac"
+      url "https://releases.stackgen.com/binaries/stackgen-cli/rc/v0.72.1-rc.1/stackgen-beta_0.72.1-rc.1_darwin_arm64.tar.gz"
+      sha256 "c9d0ddef7b16fa452049267ea1e9ba73ff438581f18e8cc13671c485ccf8a2f5"
 
       def install
         bin.install "stackgen-beta"
@@ -29,15 +29,15 @@ class StackgenBeta < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://releases.stackgen.com/binaries/stackgen-cli/rc/v0.72.0-rc.1/stackgen-beta_0.72.0-rc.1_linux_amd64.tar.gz"
-      sha256 "74edf628e9d6b3da1c468d595520bf32b60d63a2d34dd9885ded89980c12f05e"
+      url "https://releases.stackgen.com/binaries/stackgen-cli/rc/v0.72.1-rc.1/stackgen-beta_0.72.1-rc.1_linux_amd64.tar.gz"
+      sha256 "fa71ca8ff97045f69c11f322af7b8fd960653944d24ee4bbdf914b8b19fa98a8"
       def install
         bin.install "stackgen-beta"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.stackgen.com/binaries/stackgen-cli/rc/v0.72.0-rc.1/stackgen-beta_0.72.0-rc.1_linux_arm64.tar.gz"
-      sha256 "2f06a8ac64d37f2a53ab039d2ef38196f0838f3c21550cbc1babd2799642c4a9"
+      url "https://releases.stackgen.com/binaries/stackgen-cli/rc/v0.72.1-rc.1/stackgen-beta_0.72.1-rc.1_linux_arm64.tar.gz"
+      sha256 "b68bdf115594180ddf45b1fd2dba3fb7b3633068d13adf9254007e92cf8e9795"
       def install
         bin.install "stackgen-beta"
       end
