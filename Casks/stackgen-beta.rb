@@ -3,7 +3,7 @@ cask "stackgen-beta" do
   name "stackgen-beta"
   desc "Generative Infrastructure from Code"
   homepage "https://stackgen.com/"
-  version "0.72.0-rc.1"
+  version "0.72.1-rc.1"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,11 +14,11 @@ cask "stackgen-beta" do
   on_macos do
     on_intel do
       url "https://releases.stackgen.com/binaries/stackgen-cli/rc/v#{version}/stackgen-beta_#{version}_darwin_amd64.tar.gz"
-      sha256 "56471f3e30fcdd6e9962721e078551a0582de0bf0bcc7b9c6857c53a4a064ac3"
+      sha256 "74766e54470010a87256b47db4ac20bcbb90c41217ed234d895d40c28b30b869"
     end
     on_arm do
       url "https://releases.stackgen.com/binaries/stackgen-cli/rc/v#{version}/stackgen-beta_#{version}_darwin_arm64.tar.gz"
-      sha256 "ed7aadc2e23f3039427cd7e2bbe68d1760eb425b95827559a46ad9bb171889ac"
+      sha256 "c9d0ddef7b16fa452049267ea1e9ba73ff438581f18e8cc13671c485ccf8a2f5"
     end
   end
 
