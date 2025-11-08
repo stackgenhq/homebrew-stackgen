@@ -5,21 +5,21 @@
 class Stackgen < Formula
   desc "Generative Infrastructure from Code"
   homepage "https://stackgen.com/"
-  version "0.72.0"
+  version "0.72.1"
   license "Apache License 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://releases.stackgen.com/binaries/stackgen-cli/v0.72.0/stackgen-cli_0.72.0_darwin_amd64.tar.gz"
-      sha256 "12e29526bf52cde9a67ce56405cc6b9334aad14afb296e960ad866ec137410a5"
+      url "https://releases.stackgen.com/binaries/stackgen-cli/v0.72.1/stackgen-cli_0.72.1_darwin_amd64.tar.gz"
+      sha256 "d87710f92f07c2d3e6fa62a7015168fb429550760b47930f94082f372aed1e54"
 
       def install
         bin.install "stackgen"
       end
     end
     if Hardware::CPU.arm?
-      url "https://releases.stackgen.com/binaries/stackgen-cli/v0.72.0/stackgen-cli_0.72.0_darwin_arm64.tar.gz"
-      sha256 "986bc90631a9092ff292df55893fc3cbeeeb7bb03b99558247451feede0265c8"
+      url "https://releases.stackgen.com/binaries/stackgen-cli/v0.72.1/stackgen-cli_0.72.1_darwin_arm64.tar.gz"
+      sha256 "05fa97539a4c35234999acb1ef1afde059b9f936c51ad115cb7f42d37d5b8385"
 
       def install
         bin.install "stackgen"
@@ -29,15 +29,15 @@ class Stackgen < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://releases.stackgen.com/binaries/stackgen-cli/v0.72.0/stackgen-cli_0.72.0_linux_amd64.tar.gz"
-      sha256 "fc7717e73b56a7e59d5d20835893768782eca2f4d56e97e3630f55d771916b2e"
+      url "https://releases.stackgen.com/binaries/stackgen-cli/v0.72.1/stackgen-cli_0.72.1_linux_amd64.tar.gz"
+      sha256 "9485d2d5fa446e96cbb09264203f346c7c458da099cfa255a8572ab2c5d4b9e1"
       def install
         bin.install "stackgen"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.stackgen.com/binaries/stackgen-cli/v0.72.0/stackgen-cli_0.72.0_linux_arm64.tar.gz"
-      sha256 "b958a82a155a4ac90c6d8df58a5ab265ba6117d62c0b237e23a21c1d392a3c96"
+      url "https://releases.stackgen.com/binaries/stackgen-cli/v0.72.1/stackgen-cli_0.72.1_linux_arm64.tar.gz"
+      sha256 "82c34d37a2a32384f9ebc518051837bd9bae2371ac19613c7a50c55a7e98a29f"
       def install
         bin.install "stackgen"
       end
