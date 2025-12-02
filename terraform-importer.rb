@@ -5,21 +5,21 @@
 class TerraformImporter < Formula
   desc "Parsing Terraform Infrastructure as Code (IaC) files and importing them into Stackgen"
   homepage "https://stackgen.com/"
-  version "0.2.0"
+  version "0.3.0"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://releases.stackgen.com/binaries/v0.2.0/terraform-importer-cli_0.2.0_darwin_amd64.tar.gz"
-      sha256 "b7c4066d38a36391c56a591b2cd69472e2eb406703270f8f97acd481887fe1bd"
+      url "https://releases.stackgen.com/binaries/v0.3.0/terraform-importer-cli_0.3.0_darwin_amd64.tar.gz"
+      sha256 "25be1638fa75512db7756bd9a655f1ec67343d83f0eef774a00a9ad962c3f17f"
 
       def install
         bin.install "terraform-importer"
       end
     end
     if Hardware::CPU.arm?
-      url "https://releases.stackgen.com/binaries/v0.2.0/terraform-importer-cli_0.2.0_darwin_arm64.tar.gz"
-      sha256 "507ce8c07816a785924925f3bb3186714922158670b812587d0bcee0fe76da79"
+      url "https://releases.stackgen.com/binaries/v0.3.0/terraform-importer-cli_0.3.0_darwin_arm64.tar.gz"
+      sha256 "cbf9343871aa2654715e47bec9a07bb145272094a1ef146ad5677415691b19d4"
 
       def install
         bin.install "terraform-importer"
@@ -29,15 +29,15 @@ class TerraformImporter < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://releases.stackgen.com/binaries/v0.2.0/terraform-importer-cli_0.2.0_linux_amd64.tar.gz"
-      sha256 "b9f0b009ea10a34e30c2216a97663b0f7bc29c4270bd0a6b6f1bfe5045ffe8e4"
+      url "https://releases.stackgen.com/binaries/v0.3.0/terraform-importer-cli_0.3.0_linux_amd64.tar.gz"
+      sha256 "396d6edcab7dbb187c74e07e4073c33078be1fbe2428fd28a84149df25fb67b1"
       def install
         bin.install "terraform-importer"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.stackgen.com/binaries/v0.2.0/terraform-importer-cli_0.2.0_linux_arm64.tar.gz"
-      sha256 "5c4064d0bac46729f2b6ea128681d255617541a21f950352e8fb16327fcc8e77"
+      url "https://releases.stackgen.com/binaries/v0.3.0/terraform-importer-cli_0.3.0_linux_arm64.tar.gz"
+      sha256 "02e702cf3c74224f355c2b47ea30afda6e21988fbb18ff416fcf759b866c3437"
       def install
         bin.install "terraform-importer"
       end
