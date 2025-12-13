@@ -14,11 +14,11 @@ cask "logexplorer" do
   on_macos do
     on_intel do
       url "https://releases.stackgen.com/binaries/logexplorer/v#{version}/grafana-logexplorer-app_#{version}_darwin_amd64.tar.gz"
-      sha256 "2ee59391ecbce0fb22be7553642bb606d47bbc2418c14650ab68d9c15b9d634a"
+      sha256 "0b1414ba285801abfa9e961473bfe52e18e9a5d619fbb7cfcf81c8e69ba5f05f"
     end
     on_arm do
       url "https://releases.stackgen.com/binaries/logexplorer/v#{version}/grafana-logexplorer-app_#{version}_darwin_arm64.tar.gz"
-      sha256 "e671866008ffb2c26cd07c091c041063acfa8a4982829078a39a173c6df440eb"
+      sha256 "1d86e465b491e80fafebfa00548617863032743cb2b722d122f659b357f1ae4f"
     end
   end
 
