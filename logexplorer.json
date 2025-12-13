@@ -1,0 +1,15 @@
+{
+    "version": "1.0.10",
+    "architecture": {
+        "64bit": {
+            "url": "https://releases.stackgen.com/binaries/logexplorer/v1.0.10/grafana-logexplorer-app_1.0.10_windows_amd64.zip",
+            "bin": [
+                "logexplorer.exe"
+            ],
+            "hash": "dd4da85db50380898c92908d9e57d2e92f8543f44bdd35b611f209f098fe9200"
+        }
+    },
+    "homepage": "https://stackgen.com/",
+    "license": "Apache License 2.0",
+    "description": "Generative Infrastructure from Code"
+}
