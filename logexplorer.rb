@@ -11,7 +11,7 @@ class Logexplorer < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://releases.stackgen.com/binaries/logexplorer/v1.0.11/grafana-logexplorer-app_1.0.11_darwin_amd64.tar.gz"
-      sha256 "2ee59391ecbce0fb22be7553642bb606d47bbc2418c14650ab68d9c15b9d634a"
+      sha256 "0b1414ba285801abfa9e961473bfe52e18e9a5d619fbb7cfcf81c8e69ba5f05f"
 
       def install
         bin.install "logexplorer"
@@ -19,7 +19,7 @@ class Logexplorer < Formula
     end
     if Hardware::CPU.arm?
       url "https://releases.stackgen.com/binaries/logexplorer/v1.0.11/grafana-logexplorer-app_1.0.11_darwin_arm64.tar.gz"
-      sha256 "e671866008ffb2c26cd07c091c041063acfa8a4982829078a39a173c6df440eb"
+      sha256 "1d86e465b491e80fafebfa00548617863032743cb2b722d122f659b357f1ae4f"
 
       def install
         bin.install "logexplorer"
@@ -30,14 +30,14 @@ class Logexplorer < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://releases.stackgen.com/binaries/logexplorer/v1.0.11/grafana-logexplorer-app_1.0.11_linux_amd64.tar.gz"
-      sha256 "dc2fd77f1084bf53025987a741e0e22965def515770832de85701b621ec78896"
+      sha256 "d56377067c73d5dabcb4566c7ec35e39f5c30a4eab7aac63df18ebc203ae31c8"
       def install
         bin.install "logexplorer"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://releases.stackgen.com/binaries/logexplorer/v1.0.11/grafana-logexplorer-app_1.0.11_linux_arm64.tar.gz"
-      sha256 "9dc0247bfb670a0f7a50bb206b930f935c2774b6072ab8a825b41eee85b298b7"
+      sha256 "d12613c550e1dca74d023b805207db4e3c399fe598bd44b4f26a2a9501ba0997"
       def install
         bin.install "logexplorer"
       end
