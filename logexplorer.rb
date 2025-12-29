@@ -5,21 +5,21 @@
 class Logexplorer < Formula
   desc "Generative Infrastructure from Code"
   homepage "https://stackgen.com/"
-  version "1.11.0"
+  version "1.12.0"
   license "Apache License 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://releases.stackgen.com/binaries/logexplorer/v1.11.0/grafana-logexplorer-app_1.11.0_darwin_amd64.tar.gz"
-      sha256 "d407f6df02df9c81435ee5d22da7286322f462936ede180231f7005469f5c306"
+      url "https://releases.stackgen.com/binaries/logexplorer/v1.12.0/grafana-logexplorer-app_1.12.0_darwin_amd64.tar.gz"
+      sha256 "3e7f0629c3dec190fddd7f576755904086422d6f7049896ecb0e1e9e8cc8bf11"
 
       def install
         bin.install "logexplorer"
       end
     end
     if Hardware::CPU.arm?
-      url "https://releases.stackgen.com/binaries/logexplorer/v1.11.0/grafana-logexplorer-app_1.11.0_darwin_arm64.tar.gz"
-      sha256 "bec4f0b8dd667420b645612476050bbdb2eb75375776303c72764ed52ab5daee"
+      url "https://releases.stackgen.com/binaries/logexplorer/v1.12.0/grafana-logexplorer-app_1.12.0_darwin_arm64.tar.gz"
+      sha256 "e612f92629144253c2c92387865eeb1c23ec3834e3522c95191986c53a90fe61"
 
       def install
         bin.install "logexplorer"
@@ -29,15 +29,15 @@ class Logexplorer < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://releases.stackgen.com/binaries/logexplorer/v1.11.0/grafana-logexplorer-app_1.11.0_linux_amd64.tar.gz"
-      sha256 "d1a79415244e6098b083be1de1c8eb5c1d0774ec3d18c9e4869f01803a7280ba"
+      url "https://releases.stackgen.com/binaries/logexplorer/v1.12.0/grafana-logexplorer-app_1.12.0_linux_amd64.tar.gz"
+      sha256 "0b640d11c3a5dc8fc0179f2c3884ec8847241f8cd0bdaac1341bfd535585ee1e"
       def install
         bin.install "logexplorer"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.stackgen.com/binaries/logexplorer/v1.11.0/grafana-logexplorer-app_1.11.0_linux_arm64.tar.gz"
-      sha256 "d2fceec23b09fb85ed11423c57a171bb65b2aa6afa2b614c4cf9db217e424a00"
+      url "https://releases.stackgen.com/binaries/logexplorer/v1.12.0/grafana-logexplorer-app_1.12.0_linux_arm64.tar.gz"
+      sha256 "d9b8d9893988363a1b113ac1a90bd697572fe1613970e1f11c5c7f019bbcf577"
       def install
         bin.install "logexplorer"
       end
