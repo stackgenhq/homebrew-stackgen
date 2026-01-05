@@ -1,12 +1,12 @@
 {
-    "version": "1.15.0",
+    "version": "1.16.0",
     "architecture": {
         "64bit": {
-            "url": "https://releases.stackgen.com/binaries/logexplorer/v1.15.0/grafana-logexplorer-app_1.15.0_windows_amd64.zip",
+            "url": "https://releases.stackgen.com/binaries/logexplorer/v1.16.0/grafana-logexplorer-app_1.16.0_windows_amd64.zip",
             "bin": [
                 "logexplorer.exe"
             ],
-            "hash": "7b5e3e5ad15302353068d3644d0612eae963e61c60c553e3daee19ac13d56d95"
+            "hash": "49f875e4cc0892310458c970f8224cd225b001f4109bd479be217ba9e3863b2a"
         }
     },
     "homepage": "https://stackgen.com/",
