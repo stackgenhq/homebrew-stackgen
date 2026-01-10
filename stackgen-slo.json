@@ -1,0 +1,15 @@
+{
+    "version": "1.3.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://releases.stackgen.com/binaries/stackgen-slo/v1.3.0/stackgen-slo-app_1.3.0_windows_amd64.zip",
+            "bin": [
+                "stackgen-slo.exe"
+            ],
+            "hash": "ef000b5e17b4237e5bff7dcfcc24aaaa9e0349965343d9ad351704854f847524"
+        }
+    },
+    "homepage": "https://stackgen.com/",
+    "license": "Apache License 2.0",
+    "description": "Generative Infrastructure from Code"
+}
