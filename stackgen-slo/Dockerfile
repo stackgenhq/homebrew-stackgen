@@ -10,7 +10,7 @@ RUN apk update && \
     rm -rf /var/cache/apk/*
 
 RUN wget -O stackgen-slo.tar.gz \
-    https://releases.stackgen.com/binaries/stackgen-slo/v${STACKGEN_SLO_VERSION}/stackgen-slo-app_${stackgen-slo_VERSION}_${TARGETOS}_${TARGETARCH}.tar.gz && \
+    https://releases.stackgen.com/binaries/stackgen-slo/v${STACKGEN_SLO_VERSION}/stackgen-slo-app_${STACKGEN_SLO_VERSION}_${TARGETOS}_${TARGETARCH}.tar.gz && \
     tar -xzf stackgen-slo.tar.gz && \
     mv stackgen-slo /tmp/stackgen-slo
 
