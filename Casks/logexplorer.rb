@@ -3,7 +3,7 @@ cask "logexplorer" do
   name "logexplorer"
   desc "Log Explorer"
   homepage "https://stackgen.com/"
-  version "1.31.0"
+  version "1.32.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,11 +14,11 @@ cask "logexplorer" do
   on_macos do
     on_intel do
       url "https://releases.stackgen.com/binaries/logexplorer/v#{version}/grafana-logexplorer-app_#{version}_darwin_amd64.tar.gz"
-      sha256 "46a5f7e0bdb00c237563f66db674aabc705b936fe9a9dab02a9fad7d51cd7712"
+      sha256 "57ef55fc30c47b1d4c6db8ff53987968ddaf0f0ce5170c43b34ac2193a5e4e0f"
     end
     on_arm do
       url "https://releases.stackgen.com/binaries/logexplorer/v#{version}/grafana-logexplorer-app_#{version}_darwin_arm64.tar.gz"
-      sha256 "49d01dc939ca80a62d06fbbd4da53b7bfc5d111c488544f7e916f34b786552a7"
+      sha256 "634bf3ca9a5f56782886f512818c57ff2554123c4eed111044f75947e1eb48ad"
     end
   end
 
