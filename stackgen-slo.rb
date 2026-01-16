@@ -5,21 +5,21 @@
 class StackgenSlo < Formula
   desc "Generative Infrastructure from Code"
   homepage "https://stackgen.com/"
-  version "1.12.0"
+  version "1.13.0"
   license "Apache License 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://releases.stackgen.com/binaries/stackgen-slo/v1.12.0/stackgen-slo-app_1.12.0_darwin_amd64.tar.gz"
-      sha256 "a6627ba195d2d00132043a0de8982f5c05993663fe3d358d546b3ea01d87c19a"
+      url "https://releases.stackgen.com/binaries/stackgen-slo/v1.13.0/stackgen-slo-app_1.13.0_darwin_amd64.tar.gz"
+      sha256 "15d085efbbeb0424720d19d1eda593e4d0a2568c321c75b4a46a233e68cb2f0f"
 
       def install
         bin.install "stackgen-slo"
       end
     end
     if Hardware::CPU.arm?
-      url "https://releases.stackgen.com/binaries/stackgen-slo/v1.12.0/stackgen-slo-app_1.12.0_darwin_arm64.tar.gz"
-      sha256 "22569ddfe32b550fa531268e278d3f98b720cf00610d15c192aa3c540e4b7557"
+      url "https://releases.stackgen.com/binaries/stackgen-slo/v1.13.0/stackgen-slo-app_1.13.0_darwin_arm64.tar.gz"
+      sha256 "0ab7bb5c115c62bb0f7336f877bd48fd25bded0456cd6d870cdd6ce221ba12df"
 
       def install
         bin.install "stackgen-slo"
@@ -29,15 +29,15 @@ class StackgenSlo < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://releases.stackgen.com/binaries/stackgen-slo/v1.12.0/stackgen-slo-app_1.12.0_linux_amd64.tar.gz"
-      sha256 "ab505aadbbcb184c3c40027ac7fa51d29133e2c83140096829f443afb0d59627"
+      url "https://releases.stackgen.com/binaries/stackgen-slo/v1.13.0/stackgen-slo-app_1.13.0_linux_amd64.tar.gz"
+      sha256 "0431e39e0c4e920281343ba7446d9b17e2dc9b625ee00088fbad2026de922431"
       def install
         bin.install "stackgen-slo"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.stackgen.com/binaries/stackgen-slo/v1.12.0/stackgen-slo-app_1.12.0_linux_arm64.tar.gz"
-      sha256 "4f7e853c6fedf82b87139cc301d7d5e6cab4e9eec8fe6d927416788310e73b4a"
+      url "https://releases.stackgen.com/binaries/stackgen-slo/v1.13.0/stackgen-slo-app_1.13.0_linux_arm64.tar.gz"
+      sha256 "801875f460479d0b664c3a7dee2e8a7d4897ae8697131980016649b8b96136aa"
       def install
         bin.install "stackgen-slo"
       end
