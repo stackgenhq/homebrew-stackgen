@@ -1,12 +1,12 @@
 {
-    "version": "1.19.0",
+    "version": "1.20.0",
     "architecture": {
         "64bit": {
-            "url": "https://releases.stackgen.com/binaries/stackgen-slo/v1.19.0/stackgen-slo-app_1.19.0_windows_amd64.zip",
+            "url": "https://releases.stackgen.com/binaries/stackgen-slo/v1.20.0/stackgen-slo-app_1.20.0_windows_amd64.zip",
             "bin": [
                 "stackgen-slo.exe"
             ],
-            "hash": "1f28d0a3b406fd79c5f7de1ac5bce4c3c9ab5389a855e56bc94aebb207d3d326"
+            "hash": "47d428b0d2a7af3e2cf958fad017b2cd2dbd0c9a4059cd48cd4905404123d2a7"
         }
     },
     "homepage": "https://stackgen.com/",
