@@ -11,7 +11,7 @@ class StackgenSlo < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://releases.stackgen.com/binaries/stackgen-slo/v1.16.0/stackgen-slo-app_1.16.0_darwin_amd64.tar.gz"
-      sha256 "c2221fd57104acfb1043b596a909c3cf5ab1965f5f5e20ca3d88ea93c658f1d9"
+      sha256 "a73c2916179be1238bd5ad50fbc0596295dcc54c145d6ca1ef4b253d43fedd02"
 
       def install
         bin.install "stackgen-slo"
@@ -19,7 +19,7 @@ class StackgenSlo < Formula
     end
     if Hardware::CPU.arm?
       url "https://releases.stackgen.com/binaries/stackgen-slo/v1.16.0/stackgen-slo-app_1.16.0_darwin_arm64.tar.gz"
-      sha256 "a0e7d77f8e70c120d3391ed0ce9d2571087906c7eb67b29d4a402eb0ac207ee3"
+      sha256 "bbf5f138d0bae44edd43eb83827eef5392346565e9edc04ec3077d9bfcf0437e"
 
       def install
         bin.install "stackgen-slo"
@@ -30,14 +30,14 @@ class StackgenSlo < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://releases.stackgen.com/binaries/stackgen-slo/v1.16.0/stackgen-slo-app_1.16.0_linux_amd64.tar.gz"
-      sha256 "d368306ccf7ca1d36109b82b840c1451ebf8598efe9ec7bae5dd867eb90a1774"
+      sha256 "dd22af4dbac90aabbb317da6007efb964d0e5db761fa0d9068200f19110e258b"
       def install
         bin.install "stackgen-slo"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://releases.stackgen.com/binaries/stackgen-slo/v1.16.0/stackgen-slo-app_1.16.0_linux_arm64.tar.gz"
-      sha256 "1c8676ea1d74a8adec6198e44c185a99f565e7640d301ca958c717578ac6c9cf"
+      sha256 "db3fc2cf7e51954f18ff84ab14c79cbbd39a97a57d61bd3623b8efc4b16851b9"
       def install
         bin.install "stackgen-slo"
       end
