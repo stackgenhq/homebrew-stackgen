@@ -10,16 +10,16 @@ class Genie < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://releases.stackgen.com/binaries/stackgen-cli/v0.0.1/stackgen-genie_0.0.1_darwin_amd64.tar.gz"
-      sha256 "ea01aea715694bb66f711050ba5b57eb9bd35b597cb2c84637fb67da2316f985"
+      url "https://releases.stackgen.com/binaries/genie/v0.0.1/stackgen-genie_0.0.1_darwin_amd64.tar.gz"
+      sha256 "12fda08097778294f8ad25d5d9efa6693909c8039a442ac687c5dce5344615cb"
 
       def install
         bin.install "genie"
       end
     end
     if Hardware::CPU.arm?
-      url "https://releases.stackgen.com/binaries/stackgen-cli/v0.0.1/stackgen-genie_0.0.1_darwin_arm64.tar.gz"
-      sha256 "a623b471187ee5a4b4a3ea4fcaf1514ba4c4ac416a3630d79610c7caea321ae9"
+      url "https://releases.stackgen.com/binaries/genie/v0.0.1/stackgen-genie_0.0.1_darwin_arm64.tar.gz"
+      sha256 "2d785d06927bc3548d4b373fb4dd92f0ee0fcb38d98a742cf059f2de25e2b38c"
 
       def install
         bin.install "genie"
@@ -29,15 +29,15 @@ class Genie < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://releases.stackgen.com/binaries/stackgen-cli/v0.0.1/stackgen-genie_0.0.1_linux_amd64.tar.gz"
-      sha256 "ba1edc75afd99468b5880aa50cb2d2fcc66a76d9ca4fb08fd260bdd881dc8d44"
+      url "https://releases.stackgen.com/binaries/genie/v0.0.1/stackgen-genie_0.0.1_linux_amd64.tar.gz"
+      sha256 "df5e6c648c54300fb99458e57d0c4504ae28339eb40a95cd28ffdf44a644f382"
       def install
         bin.install "genie"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.stackgen.com/binaries/stackgen-cli/v0.0.1/stackgen-genie_0.0.1_linux_arm64.tar.gz"
-      sha256 "d75d19fcd67147e21467f16277e5a745f1580b5e47f8ba7798a5436e3e7a2932"
+      url "https://releases.stackgen.com/binaries/genie/v0.0.1/stackgen-genie_0.0.1_linux_arm64.tar.gz"
+      sha256 "c1481e48e11f64053a60b25abf8459d14b824ca8ff426c12ee96d858c51f8043"
       def install
         bin.install "genie"
       end
