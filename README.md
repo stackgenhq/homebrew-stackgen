@@ -1,78 +1,132 @@
-# StackGen Homebrew Installation
+# StackGen Homebrew Tap
 
-This guide will walk you through the steps to install `stackgen` using Homebrew.
+Install StackGen's CLI and tools via [Homebrew](https://brew.sh).
+
+---
+
+## Table of contents
+
+- [Prerequisites](#prerequisites)
+- [Available formulae](#available-formulae)
+- [Quick install (StackGen CLI)](#quick-install-stackgen-cli)
+- [Install other tools](#install-other-tools)
+- [Configuration](#configuration)
+- [Usage](#usage)
+
+---
 
 ## Prerequisites
 
-Before you begin, make sure you have the following:
+- **Homebrew** — Install if needed:
 
-- An account at <https://cloud.stackgen.com/>
-- Homebrew installed on your system. If you don't have Homebrew installed, you can install it by running the following command in your terminal:
+  ```bash
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  ```
 
-    ```shell
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    ```
+- **StackGen account** (for cloud) — Sign up at [cloud.stackgen.com](https://cloud.stackgen.com/)
 
-## Installation
+---
 
-Follow these steps to install `stackgen` using Homebrew:
+## Available formulae
 
-1. Open your terminal.
+| Formula | Description | Install command |
+|--------|-------------|-----------------|
+| **stackgen** | Main CLI — Generative Infrastructure from Code | `brew install stackgenhq/homebrew-stackgen/stackgen` |
+| **stackgen-beta** | StackGen CLI (beta/RC releases) | `brew install stackgenhq/homebrew-stackgen/stackgen-beta` |
+| **stackgen-slo** | SLO app — Generative Infrastructure from Code | `brew install stackgenhq/homebrew-stackgen/stackgen-slo` |
+| **terraform-importer** | Parse Terraform IaC and import into Stackgen | `brew install stackgenhq/homebrew-stackgen/terraform-importer` |
+| **cloud2code** | Convert cloud resources to tfstate files | `brew install stackgenhq/homebrew-stackgen/cloud2code` |
+| **cloud2code-beta** | Cloud2code (beta/RC releases) | `brew install stackgenhq/homebrew-stackgen/cloud2code-beta` |
+| **logexplorer** | Log Explorer | `brew install stackgenhq/homebrew-stackgen/logexplorer` |
+| **genie** | Generative Infrastructure from Code (Genie) | `brew install stackgenhq/homebrew-stackgen/genie` |
+| **stackboot** | Generative Infrastructure from Code (StackBoot, macOS only) | `brew install stackgenhq/homebrew-stackgen/stackboot` |
 
-2. Run the following command to add the stackgen tap:
+---
 
-     ```shell
-     brew install stackgenhq/homebrew-stackgen/stackgen
-     ```
+## Quick install (StackGen CLI)
 
-3. After the installation is complete, you can verify the installation by running the following command:
+1. Add the tap and install:
 
-     ```shell
-     stackgen version
-     ```
+   ```bash
+   brew tap stackgenhq/homebrew-stackgen
+   brew install stackgenhq/homebrew-stackgen/stackgen
+   ```
 
-     This should display the version of `stackgen` installed on your system.
+2. Check the install:
 
-## Configuring
+   ```bash
+   stackgen version
+   ```
 
-### Using our cloud service
+---
 
-To configure `stackgen`, you need to set your API key. Follow these steps:
+## Install other tools
 
-1. Log in to your account at <https://cloud.stackgen.com/>.
+Use the same pattern for any formula from the [table above](#available-formulae):
 
-2. Navigate to your [personal access token settings](https://cloud.stackgen.com/account-settings/pat/).
-
-3. Copy your API key.
-
-4. Run the following command in your terminal to set the API key:
-
-     ```shell
-     export STACKGEN_TOKEN=<YOUR_API_KEY>
-     ```
-
-     Replace `<YOUR_API_KEY>` with your actual API key.
-
-### Using on-premises installation
-
-```sh
-export STACKGEN_URL="https://stackgen.<acme.org>"
+```bash
+brew tap stackgenhq/homebrew-stackgen   # only needed once
+brew install stackgenhq/homebrew-stackgen/<formula>
 ```
 
-1. Log in to your account at <https://stackgen.acme.org/>.
+Examples:
 
-2. Navigate to your personal access token settings @ <https://stackgen.acme.org/account-settings/pat/>.
+```bash
+brew install stackgenhq/homebrew-stackgen/terraform-importer
+brew install stackgenhq/homebrew-stackgen/cloud2code
+brew install stackgenhq/homebrew-stackgen/logexplorer
+```
 
-3. Copy your API key.
+---
 
-4. Run the following command in your terminal to set the API key:
+## Configuration
 
-     ```shell
-     export STACKGEN_TOKEN=<YOUR_API_KEY>
-     ```
+The CLI **requires** both a base URL and an API token.
 
-     Replace `<YOUR_API_KEY>` with your actual API key.
+### Required environment variables
+
+| Variable | Required | Description |
+|----------|----------|-------------|
+| `STACKGEN_URL` | **Yes** | Base URL of the StackGen API (cloud or on-prem). |
+| `STACKGEN_TOKEN` | **Yes** | Your API key (personal access token). |
+
+### Cloud (cloud.stackgen.com)
+
+1. Log in at [cloud.stackgen.com](https://cloud.stackgen.com/).
+2. Open [Personal access tokens](https://cloud.stackgen.com/account-settings/pat/) and copy your API key.
+3. Set both in your shell:
+
+   ```bash
+   export STACKGEN_URL="https://cloud.stackgen.com"
+   export STACKGEN_TOKEN=<YOUR_API_KEY>
+   ```
+
+   Add these lines to `~/.zshrc` or `~/.bashrc` to make them persistent.
+
+### On-premises
+
+Use your organization’s StackGen URL and API key:
+
+```bash
+export STACKGEN_URL="https://my-org.stackgen.com"
+export STACKGEN_TOKEN=<YOUR_API_KEY>
+```
+
+---
 
 ## Usage
 
-You can now start using `stackgen`. Run the following command to see the available commands:
+After installing **stackgen**:
+
+```bash
+stackgen --help
+```
+
+For other tools, run the binary name (e.g. `terraform-importer --help`, `logexplorer --help`).
+
+---
+
+## Links
+
+- [StackGen](https://stackgen.com/)
+- [Documentation](https://docs.stackgen.com/)
