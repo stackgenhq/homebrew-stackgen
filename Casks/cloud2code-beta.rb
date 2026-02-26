@@ -3,7 +3,7 @@ cask "cloud2code-beta" do
   name "cloud2code-beta"
   desc "Convert your cloud resources to tfstate files"
   homepage "https://stackgen.com/"
-  version "0.5.0-rc.5"
+  version "0.4.5-rc.1"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,11 +14,11 @@ cask "cloud2code-beta" do
   on_macos do
     on_intel do
       url "https://releases.stackgen.com/binaries/cloud2code/rc/v#{version}/cloud2code-beta_#{version}_darwin_amd64.tar.gz"
-      sha256 "9502f69dd9fd31c106cf3683fb465d335576e6d3323dd0ad869686cabe189f3a"
+      sha256 "f4a28c294a1bd59b4f4e324650c2a41f80ccf29d953cfc34d34700a68dc30c77"
     end
     on_arm do
       url "https://releases.stackgen.com/binaries/cloud2code/rc/v#{version}/cloud2code-beta_#{version}_darwin_arm64.tar.gz"
-      sha256 "6fe1eb9c391019a689bea966237aa976f8abd8dbd9c71df0f5389824e583a99b"
+      sha256 "5a7504c277c7d1aca2be49485f2655eed6cfdb6401a68a9fef092e0ce869c936"
     end
   end
 
