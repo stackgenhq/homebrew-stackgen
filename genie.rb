@@ -5,21 +5,21 @@
 class Genie < Formula
   desc "Generative Infrastructure from Code"
   homepage "https://stackgen.com/"
-  version "0.0.10"
+  version "0.0.11"
   license "Apache License 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://releases.stackgen.com/binaries/genie/v0.0.10/stackgen-genie_0.0.10_darwin_amd64.tar.gz"
-      sha256 "609d15088266c01198443899438bcf0a4572bb5f1ec1ad6456745c76acc59568"
+      url "https://releases.stackgen.com/binaries/genie/v0.0.11/stackgen-genie_0.0.11_darwin_amd64.tar.gz"
+      sha256 "80c60bb72d095f55023b96bf6e585826f1b289d52d7d48f50bf500c6f689bd05"
 
       def install
         bin.install "genie"
       end
     end
     if Hardware::CPU.arm?
-      url "https://releases.stackgen.com/binaries/genie/v0.0.10/stackgen-genie_0.0.10_darwin_arm64.tar.gz"
-      sha256 "a1e8c27ca70941a8a35bda57e56254769abe1234f4923a49908d082b72a53418"
+      url "https://releases.stackgen.com/binaries/genie/v0.0.11/stackgen-genie_0.0.11_darwin_arm64.tar.gz"
+      sha256 "6914133f1e08695af777bbcbe4e0689174d062dbddc58385188179941d08c9b6"
 
       def install
         bin.install "genie"
@@ -29,15 +29,15 @@ class Genie < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://releases.stackgen.com/binaries/genie/v0.0.10/stackgen-genie_0.0.10_linux_amd64.tar.gz"
-      sha256 "748e689c5e38f9980467a599a95c1f12992cbc9e9d49d22dfa424f06e9b33c68"
+      url "https://releases.stackgen.com/binaries/genie/v0.0.11/stackgen-genie_0.0.11_linux_amd64.tar.gz"
+      sha256 "2432102899278334efcc3a7fdfc0ae49b5c63b12a0f4c1497dd7d12eaef00825"
       def install
         bin.install "genie"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.stackgen.com/binaries/genie/v0.0.10/stackgen-genie_0.0.10_linux_arm64.tar.gz"
-      sha256 "43f6bf1cbacb0b8382841d7c7f067202eee45a21b7963cc7289b65a47e9ab272"
+      url "https://releases.stackgen.com/binaries/genie/v0.0.11/stackgen-genie_0.0.11_linux_arm64.tar.gz"
+      sha256 "6628ac7054d74ebc10a09e6d448311be09bd93e8f1c37ec1873dc8ad90148ff1"
       def install
         bin.install "genie"
       end
