@@ -1,12 +1,12 @@
 {
-    "version": "0.0.11",
+    "version": "0.0.12",
     "architecture": {
         "64bit": {
-            "url": "https://releases.stackgen.com/binaries/genie/v0.0.11/stackgen-genie_0.0.11_windows_amd64.zip",
+            "url": "https://releases.stackgen.com/binaries/genie/v0.0.12/stackgen-genie_0.0.12_windows_amd64.zip",
             "bin": [
                 "genie.exe"
             ],
-            "hash": "532ec7437f2459ef362ff15e0e2360e59764f15fcb62472a73d14a65133e92f9"
+            "hash": "0e3257a6fa64f3d1db4572b9c1a5f59c7415572826210bda6b9ddf3589c4fb63"
         }
     },
     "homepage": "https://stackgen.com/",
