@@ -5,23 +5,23 @@
 class Cloud2codeBeta < Formula
   desc "Convert your cloud resources to tfstate files"
   homepage "https://stackgen.com/"
-  version "0.5.0-rc.5"
+  version "0.4.5-rc.1"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://releases.stackgen.com/binaries/cloud2code/rc/v0.5.0-rc.5/cloud2code-beta_0.5.0-rc.5_darwin_amd64.tar.gz"
-      sha256 "9502f69dd9fd31c106cf3683fb465d335576e6d3323dd0ad869686cabe189f3a"
+      url "https://releases.stackgen.com/binaries/cloud2code/rc/v0.4.5-rc.1/cloud2code-beta_0.4.5-rc.1_darwin_amd64.tar.gz"
+      sha256 "f4a28c294a1bd59b4f4e324650c2a41f80ccf29d953cfc34d34700a68dc30c77"
 
-      def install
+      define_method(:install) do
         bin.install "cloud2code-beta"
       end
     end
     if Hardware::CPU.arm?
-      url "https://releases.stackgen.com/binaries/cloud2code/rc/v0.5.0-rc.5/cloud2code-beta_0.5.0-rc.5_darwin_arm64.tar.gz"
-      sha256 "6fe1eb9c391019a689bea966237aa976f8abd8dbd9c71df0f5389824e583a99b"
+      url "https://releases.stackgen.com/binaries/cloud2code/rc/v0.4.5-rc.1/cloud2code-beta_0.4.5-rc.1_darwin_arm64.tar.gz"
+      sha256 "5a7504c277c7d1aca2be49485f2655eed6cfdb6401a68a9fef092e0ce869c936"
 
-      def install
+      define_method(:install) do
         bin.install "cloud2code-beta"
       end
     end
@@ -29,16 +29,16 @@ class Cloud2codeBeta < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://releases.stackgen.com/binaries/cloud2code/rc/v0.5.0-rc.5/cloud2code-beta_0.5.0-rc.5_linux_amd64.tar.gz"
-      sha256 "e46b8d249a9878041ca105beaaae05db862e537452234c32b6d428576346821d"
-      def install
+      url "https://releases.stackgen.com/binaries/cloud2code/rc/v0.4.5-rc.1/cloud2code-beta_0.4.5-rc.1_linux_amd64.tar.gz"
+      sha256 "935de3c552e4ad7f2d8a91e23acefd42746f9f97517e7bffe110dc7dc840a8fe"
+      define_method(:install) do
         bin.install "cloud2code-beta"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.stackgen.com/binaries/cloud2code/rc/v0.5.0-rc.5/cloud2code-beta_0.5.0-rc.5_linux_arm64.tar.gz"
-      sha256 "70c4fb5d59a20af498cbd4a011f92405a97a76edc29d7f27156024a8c00e81e1"
-      def install
+      url "https://releases.stackgen.com/binaries/cloud2code/rc/v0.4.5-rc.1/cloud2code-beta_0.4.5-rc.1_linux_arm64.tar.gz"
+      sha256 "d759dfef63e7ab47af266d47837fadfcec2110eed517f894f2efe98a012315af"
+      define_method(:install) do
         bin.install "cloud2code-beta"
       end
     end
