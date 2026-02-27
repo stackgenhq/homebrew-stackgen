@@ -11,7 +11,7 @@ class GenieBeta < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://releases.stackgen.com/binaries/genie/v0.0.13-rc.1/stackgen-genie_0.0.13-rc.1_darwin_amd64.tar.gz"
-      sha256 "2b4346f1c5cac7aa97e06d4e9517fee8f176e3c8b6e878e147a7de6e0b9e55d7"
+      sha256 "7830fd301ae6013aa24a835972c723ec4d4df38fd79ccdaf657304fe0d7e317c"
 
       def install
         bin.install "genie-beta"
@@ -19,7 +19,7 @@ class GenieBeta < Formula
     end
     if Hardware::CPU.arm?
       url "https://releases.stackgen.com/binaries/genie/v0.0.13-rc.1/stackgen-genie_0.0.13-rc.1_darwin_arm64.tar.gz"
-      sha256 "dd2e566f7b5566fb391f1df3a9c0b6e2d3b22b122bfc5cdd59ed48aa1eb6a76d"
+      sha256 "adac4b9403cc2e6b64af7a45cc7f1731fc2ef926582de483b251f38411624581"
 
       def install
         bin.install "genie-beta"
@@ -30,14 +30,14 @@ class GenieBeta < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://releases.stackgen.com/binaries/genie/v0.0.13-rc.1/stackgen-genie_0.0.13-rc.1_linux_amd64.tar.gz"
-      sha256 "2040d1199a528176dfda20119d0814d8493a0983e7319730e5605d6675e9efb3"
+      sha256 "54636f365ae527b033338bf9e454daa283121bdcba0e9ac2dc0bb8e610ce1210"
       def install
         bin.install "genie-beta"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://releases.stackgen.com/binaries/genie/v0.0.13-rc.1/stackgen-genie_0.0.13-rc.1_linux_arm64.tar.gz"
-      sha256 "0432c5eb15eb57894bd35920cc412efc7860fc7f8bfd3796de9561ce14c1e23a"
+      sha256 "f7954ac4e056285dcbb16c36d675a4d583a2c41e183a095f6312137def0afb9f"
       def install
         bin.install "genie-beta"
       end
