@@ -5,21 +5,21 @@
 class Genie < Formula
   desc "Generative Infrastructure from Code"
   homepage "https://stackgen.com/"
-  version "0.1.1"
+  version "0.1.2"
   license "Apache License 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://releases.stackgen.com/binaries/genie/v0.1.1/genie_0.1.1_darwin_amd64.tar.gz"
-      sha256 "39b517281b5568e573d04e6f945fc702817426b04dcffadb2ad96798f290c290"
+      url "https://releases.stackgen.com/binaries/genie/v0.1.2/genie_0.1.2_darwin_amd64.tar.gz"
+      sha256 "7661973bcc69c4747e9b5459e27007a78b7c6b22b267db19f6eaa92d46478cd1"
 
       def install
         bin.install "genie"
       end
     end
     if Hardware::CPU.arm?
-      url "https://releases.stackgen.com/binaries/genie/v0.1.1/genie_0.1.1_darwin_arm64.tar.gz"
-      sha256 "2bbee863b9d1c70fc8ba4b8b058166345e1d764eb305b74619730f408d935317"
+      url "https://releases.stackgen.com/binaries/genie/v0.1.2/genie_0.1.2_darwin_arm64.tar.gz"
+      sha256 "be840fdbc28db38b4107b603cd3aead3277322f20bd4a09e31f7a0685681a356"
 
       def install
         bin.install "genie"
@@ -29,15 +29,15 @@ class Genie < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://releases.stackgen.com/binaries/genie/v0.1.1/genie_0.1.1_linux_amd64.tar.gz"
-      sha256 "88711b5c29b1c9ba08c6b373775ec6d00c30c5ee281641ac5e299cd92259c9f3"
+      url "https://releases.stackgen.com/binaries/genie/v0.1.2/genie_0.1.2_linux_amd64.tar.gz"
+      sha256 "3483ef6b0987a317329f9faafad6a30e685dc30fee352fc57ba11bd4dea6408a"
       def install
         bin.install "genie"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.stackgen.com/binaries/genie/v0.1.1/genie_0.1.1_linux_arm64.tar.gz"
-      sha256 "f88f06074def187efb231bbda11f37350dfc56887b935878a3b7051751484109"
+      url "https://releases.stackgen.com/binaries/genie/v0.1.2/genie_0.1.2_linux_arm64.tar.gz"
+      sha256 "e755fb4b14f14ec511f62bb915145b8f02ae3d94b888dfda26df02b947c4b0d4"
       def install
         bin.install "genie"
       end
