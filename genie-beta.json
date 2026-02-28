@@ -1,12 +1,12 @@
 {
-    "version": "0.1.1-rc.1",
+    "version": "0.1.2-rc.1",
     "architecture": {
         "64bit": {
-            "url": "https://releases.stackgen.com/binaries/genie-beta/v0.1.1-rc.1/genie_0.1.1-rc.1_windows_amd64.zip",
+            "url": "https://releases.stackgen.com/binaries/genie-beta/v0.1.2-rc.1/genie_0.1.2-rc.1_windows_amd64.zip",
             "bin": [
                 "genie-beta.exe"
             ],
-            "hash": "44afcce7def1912d87623e4db55b001e3e55d19bd64e10bd45c5fa39035af983"
+            "hash": "653c6f9aedd1427d9a998c167b606477ae7c15a62c1c540e4f1f6cfe51a7a568"
         }
     },
     "homepage": "https://stackgen.com/",
