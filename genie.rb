@@ -5,21 +5,21 @@
 class Genie < Formula
   desc "Generative Infrastructure from Code"
   homepage "https://stackgen.com/"
-  version "0.1.2"
+  version "0.1.2-rc.2"
   license "Apache License 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://releases.stackgen.com/binaries/genie/v0.1.2/genie_0.1.2_darwin_amd64.tar.gz"
-      sha256 "7661973bcc69c4747e9b5459e27007a78b7c6b22b267db19f6eaa92d46478cd1"
+      url "https://releases.stackgen.com/binaries/genie/v0.1.2-rc.2/genie_0.1.2-rc.2_darwin_amd64.tar.gz"
+      sha256 "aad7fc5bdf676d21d3edc26a01a80a299caaf4c6ab75beae09f52b61992e5285"
 
       def install
         bin.install "genie"
       end
     end
     if Hardware::CPU.arm?
-      url "https://releases.stackgen.com/binaries/genie/v0.1.2/genie_0.1.2_darwin_arm64.tar.gz"
-      sha256 "be840fdbc28db38b4107b603cd3aead3277322f20bd4a09e31f7a0685681a356"
+      url "https://releases.stackgen.com/binaries/genie/v0.1.2-rc.2/genie_0.1.2-rc.2_darwin_arm64.tar.gz"
+      sha256 "13aeeff41bc6fe982181309795c44d3869363cd0b247d5527a5ee53adda08e95"
 
       def install
         bin.install "genie"
@@ -29,15 +29,15 @@ class Genie < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://releases.stackgen.com/binaries/genie/v0.1.2/genie_0.1.2_linux_amd64.tar.gz"
-      sha256 "3483ef6b0987a317329f9faafad6a30e685dc30fee352fc57ba11bd4dea6408a"
+      url "https://releases.stackgen.com/binaries/genie/v0.1.2-rc.2/genie_0.1.2-rc.2_linux_amd64.tar.gz"
+      sha256 "8ea9a094152ce2e5806498d905e4cc292f396523ecf0b0a67da6ec895cf2e635"
       def install
         bin.install "genie"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.stackgen.com/binaries/genie/v0.1.2/genie_0.1.2_linux_arm64.tar.gz"
-      sha256 "e755fb4b14f14ec511f62bb915145b8f02ae3d94b888dfda26df02b947c4b0d4"
+      url "https://releases.stackgen.com/binaries/genie/v0.1.2-rc.2/genie_0.1.2-rc.2_linux_arm64.tar.gz"
+      sha256 "57aca5547eff17a3d1dc06cd0198bca8001a34a2fc8c8da6c411af85a36b0908"
       def install
         bin.install "genie"
       end
