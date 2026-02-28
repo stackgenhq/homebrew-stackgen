@@ -11,7 +11,7 @@ class Genie < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://releases.stackgen.com/binaries/genie/v0.1.0/genie_0.1.0_darwin_amd64.tar.gz"
-      sha256 "ee241731256734ef113b1bdf60b925d161208a104a113f116127ed09a7dc08da"
+      sha256 "340c295ac20c86598aca315e2f19747ced054f1fa2e7ec2bea7eb78b830388f6"
 
       def install
         bin.install "genie"
@@ -19,7 +19,7 @@ class Genie < Formula
     end
     if Hardware::CPU.arm?
       url "https://releases.stackgen.com/binaries/genie/v0.1.0/genie_0.1.0_darwin_arm64.tar.gz"
-      sha256 "a67bc99dddaabe0ad88a55cb597f29c763237dabb0a56e02681562619be91136"
+      sha256 "1ffbc7e43aecf0c6ca13cb06315013921348ceb2bfd1775daa2c24ccd6f834da"
 
       def install
         bin.install "genie"
@@ -30,14 +30,14 @@ class Genie < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://releases.stackgen.com/binaries/genie/v0.1.0/genie_0.1.0_linux_amd64.tar.gz"
-      sha256 "28faa66d77269e16cfce692fbacf8bb83f42cc0efe28c6bd72b41aa06e74bf2d"
+      sha256 "c803692cab9fe8d83136c8261ebece064e5d2ddb8dd860902543e02ea5ed5de2"
       def install
         bin.install "genie"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://releases.stackgen.com/binaries/genie/v0.1.0/genie_0.1.0_linux_arm64.tar.gz"
-      sha256 "ef7ac5dc86a46c9cd152a94745d6a31a65c6e15a9e55d1c277b046e4b51820ea"
+      sha256 "a21da52e4230f89fe98a3ce5c5280ac4e1e697da524f853586a09344ee0cbc70"
       def install
         bin.install "genie"
       end
