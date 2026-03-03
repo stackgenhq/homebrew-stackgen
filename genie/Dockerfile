@@ -10,7 +10,7 @@ RUN apk update && \
     rm -rf /var/cache/apk/*
 
 RUN wget -O genie.tar.gz \
-    https://releases.stackgen.com/binaries/genie/v${GENIE_VERSION}/stackgen-genie_${GENIE_VERSION}_${TARGETOS}_${TARGETARCH}.tar.gz && \
+    https://releases.stackgen.com/binaries/genie/v${GENIE_VERSION}/genie_${GENIE_VERSION}_${TARGETOS}_${TARGETARCH}.tar.gz && \
     tar -xzf genie.tar.gz && \
     mv genie /tmp/genie
 
