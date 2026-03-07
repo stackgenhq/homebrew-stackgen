@@ -23,8 +23,8 @@ RUN apk update && \
 
 USER stackgen
 
-COPY --from=download_binary --chown=stackgen:stackgen /tmp/genie-beta /usr/local/bin/genie-beta
+COPY --from=download_binary --chown=stackgen:stackgen /tmp/genie-beta /usr/local/bin/genie
 
-RUN chmod +x /usr/local/bin/genie-beta
+RUN chmod +x /usr/local/bin/genie
 
-ENTRYPOINT ["/usr/local/bin/genie-beta"]
+ENTRYPOINT ["/usr/local/bin/genie"]
