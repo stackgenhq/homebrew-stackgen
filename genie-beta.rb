@@ -5,21 +5,21 @@
 class GenieBeta < Formula
   desc "Generative Infrastructure from Code"
   homepage "https://stackgen.com/"
-  version "0.1.8-rc.18"
+  version "0.1.8-rc.19"
   license "Apache License 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://releases.stackgen.com/binaries/genie-beta/v0.1.8-rc.18/genie_0.1.8-rc.18_darwin_amd64.tar.gz"
-      sha256 "1babc8ffb6601344cf7562060fcb48d2bc4358ce98f1343bc9855edcffd8a81a"
+      url "https://releases.stackgen.com/binaries/genie-beta/v0.1.8-rc.19/genie_0.1.8-rc.19_darwin_amd64.tar.gz"
+      sha256 "dc135bb0304afc27108d3ced2d2493187b33f68b2ec964b085f1fe0323275f1f"
 
       def install
         bin.install "genie-beta"
       end
     end
     if Hardware::CPU.arm?
-      url "https://releases.stackgen.com/binaries/genie-beta/v0.1.8-rc.18/genie_0.1.8-rc.18_darwin_arm64.tar.gz"
-      sha256 "c1dc871b4bdb6d9ce5319e68e8527b1354e72224b5adab32fb79f2a5390f2371"
+      url "https://releases.stackgen.com/binaries/genie-beta/v0.1.8-rc.19/genie_0.1.8-rc.19_darwin_arm64.tar.gz"
+      sha256 "0e0522ba1d080190b05d7f9c7b4e07f47a0952c1f0ea706c46c7e625afcae9ca"
 
       def install
         bin.install "genie-beta"
@@ -29,15 +29,15 @@ class GenieBeta < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://releases.stackgen.com/binaries/genie-beta/v0.1.8-rc.18/genie_0.1.8-rc.18_linux_amd64.tar.gz"
-      sha256 "7ff9b71cdf4b71cd10be673d501d94304e6a0605fcd904946a746fe25b49a5ec"
+      url "https://releases.stackgen.com/binaries/genie-beta/v0.1.8-rc.19/genie_0.1.8-rc.19_linux_amd64.tar.gz"
+      sha256 "410c871fc25b5a508e06b20706578673285ed0b10d57940b7f3faf6268a86e8a"
       def install
         bin.install "genie-beta"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.stackgen.com/binaries/genie-beta/v0.1.8-rc.18/genie_0.1.8-rc.18_linux_arm64.tar.gz"
-      sha256 "ee71e9f0099af3169a8b0b88e4f3b4cd7ca20b9cdc24edb6285cf6d3c5b70bee"
+      url "https://releases.stackgen.com/binaries/genie-beta/v0.1.8-rc.19/genie_0.1.8-rc.19_linux_arm64.tar.gz"
+      sha256 "53631451b517c6214f8240a26642d999f6c3f73cad8d080aa6600af7ca7affa3"
       def install
         bin.install "genie-beta"
       end
