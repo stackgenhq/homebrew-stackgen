@@ -10,7 +10,7 @@ class Pilot < Formula
   desc "StackGen Pilot: CLI-first SRE operational experience"
   homepage "https://github.com/appcd-dev/pilot"
   version "0.0.0-dev"
-  license "Proprietary"
+  license "LicenseRef-Proprietary"
 
   on_macos do
     if Hardware::CPU.intel?
