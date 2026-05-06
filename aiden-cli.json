@@ -1,0 +1,15 @@
+{
+    "version": "0.0.15",
+    "architecture": {
+        "64bit": {
+            "url": "https://releases.stackgen.com/binaries/aios-remote/v0.0.15/stackgen-guild_0.0.15_windows_amd64.zip",
+            "bin": [
+                "aiden-cli.exe"
+            ],
+            "hash": "152aac49b0ac0502434561312acf969e98f22d4208de6fe28d604316ec67249f"
+        }
+    },
+    "homepage": "https://stackgen.com/",
+    "license": "Apache License 2.0",
+    "description": "StackGen AI Agent CLI"
+}
