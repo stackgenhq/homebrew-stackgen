@@ -5,21 +5,21 @@
 class AidenCli < Formula
   desc "StackGen AI Agent CLI"
   homepage "https://stackgen.com/"
-  version "0.0.16"
+  version "0.1.17"
   license "Apache License 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://releases.stackgen.com/binaries/aios-remote/v0.0.16/aiden-cli_0.0.16_darwin_amd64.tar.gz"
-      sha256 "bbe091da35aa838ee17b83287581dbfce20c72588b9826705f761d64ace25614"
+      url "https://releases.stackgen.com/binaries/aios-remote/v0.1.17/aiden-cli_0.1.17_darwin_amd64.tar.gz"
+      sha256 "49a8cacf91e2170a4463f1243536ff6fae2c8c5ea5f21fd6677a3176f946523e"
 
       define_method(:install) do
         bin.install "aiden-cli"
       end
     end
     if Hardware::CPU.arm?
-      url "https://releases.stackgen.com/binaries/aios-remote/v0.0.16/aiden-cli_0.0.16_darwin_arm64.tar.gz"
-      sha256 "748827871a84ca34dcb1f1fdc0810f1376c6ea444101eef82b323bb039510378"
+      url "https://releases.stackgen.com/binaries/aios-remote/v0.1.17/aiden-cli_0.1.17_darwin_arm64.tar.gz"
+      sha256 "6ded3ba30a4a7eb128668ff4752d8a7766d136390a897e8c181d655c199dbf23"
 
       define_method(:install) do
         bin.install "aiden-cli"
@@ -29,15 +29,15 @@ class AidenCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://releases.stackgen.com/binaries/aios-remote/v0.0.16/aiden-cli_0.0.16_linux_amd64.tar.gz"
-      sha256 "5db266b8903cf5d01d6cc0d89d8f52ee0fc22d2abf11d14c87376723fe847f66"
+      url "https://releases.stackgen.com/binaries/aios-remote/v0.1.17/aiden-cli_0.1.17_linux_amd64.tar.gz"
+      sha256 "bc35750cf9aff349a747493ea6a632495a081f6b0953825c9aefe2aba3d44035"
       define_method(:install) do
         bin.install "aiden-cli"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.stackgen.com/binaries/aios-remote/v0.0.16/aiden-cli_0.0.16_linux_arm64.tar.gz"
-      sha256 "09ad9ae4440557e33c10588ebc4b786ed98db43494c3892578a2d59ec026e18a"
+      url "https://releases.stackgen.com/binaries/aios-remote/v0.1.17/aiden-cli_0.1.17_linux_arm64.tar.gz"
+      sha256 "5b474bc1868258e1fb46bca30575bf780b8786b51ed6b5da9795b7c225ec7cde"
       define_method(:install) do
         bin.install "aiden-cli"
       end
