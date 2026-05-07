@@ -1,12 +1,12 @@
 {
-    "version": "0.1.18",
+    "version": "0.1.19",
     "architecture": {
         "64bit": {
-            "url": "https://releases.stackgen.com/binaries/aios-remote/v0.1.18/aiden-cli_0.1.18_windows_amd64.zip",
+            "url": "https://releases.stackgen.com/binaries/aios-remote/v0.1.19/aiden-cli_0.1.19_windows_amd64.zip",
             "bin": [
                 "aiden-cli.exe"
             ],
-            "hash": "6d39dd1942fc12f4862425069b7f04a8134beb19d578e88c4fdcb6f3ff5b5f4f"
+            "hash": "a87dc36bf960d068a185bab3ceacc14594ea5b4e3eed958899743562a48d2dca"
         }
     },
     "homepage": "https://stackgen.com/",
