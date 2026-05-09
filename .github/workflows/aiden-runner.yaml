@@ -41,7 +41,9 @@ jobs:
       - name: Get aiden-runner version
         id: version
         run: |
-          echo "VERSION=$(grep 'version' aiden-runner.rb | awk '{print $NF}' | tr -d '"')" >> $GITHUB_OUTPUT
+          VERSION="$(awk '$1 == \"version\" { print $2; exit }' aiden-runner.rb | tr -d '\"')"
+          test -n "$VERSION"
+          echo "VERSION=$VERSION" >> "$GITHUB_OUTPUT"
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
       - name: Set up Docker Buildx
