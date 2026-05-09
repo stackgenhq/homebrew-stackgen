@@ -1,0 +1,15 @@
+{
+    "version": "0.1.22",
+    "architecture": {
+        "64bit": {
+            "url": "https://releases.stackgen.com/binaries/aios-remote/v0.1.22/aiden-runner_0.1.22_windows_amd64.zip",
+            "bin": [
+                "aiden-runner.exe"
+            ],
+            "hash": "a326049b6c4de6ad6fbfdbd57ce1bab7ccdc5510986ccec3941d65507d22685e"
+        }
+    },
+    "homepage": "https://stackgen.com/",
+    "license": "Apache License 2.0",
+    "description": "StackGen AI Agent CLI"
+}
