@@ -13,7 +13,8 @@ RUN wget --fail -O aiden-runner.tar.gz \
     https://releases.stackgen.com/binaries/aios-remote/v${AIDEN_RUNNER_VERSION}/aiden-runner_${AIDEN_RUNNER_VERSION}_${TARGETOS}_${TARGETARCH}.tar.gz && \
     tar -xzf aiden-runner.tar.gz && \
     mv aiden-runner /tmp/aiden-runner && \
-    chmod +x /tmp/aiden-runner
+    chmod +x /tmp/aiden-runner && \
+    rm -f aiden-runner.tar.gz
 
 FROM alpine:latest
 
