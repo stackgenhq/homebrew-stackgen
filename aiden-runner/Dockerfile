@@ -12,6 +12,7 @@ RUN apk update && \
 RUN URL="https://releases.stackgen.com/binaries/aios-remote/v${AIDEN_RUNNER_VERSION}/aiden-runner_${AIDEN_RUNNER_VERSION}_${TARGETOS}_${TARGETARCH}.tar.gz" && \
     wget --fail -O aiden-runner.tar.gz "$URL" || { echo "Error: failed to download aiden-runner from $URL" >&2; exit 1; } && \
     tar -xzf aiden-runner.tar.gz && \
+    test -f aiden-runner || { echo "Error: extracted archive does not contain aiden-runner binary" >&2; exit 1; } && \
     mv aiden-runner /tmp/aiden-runner && \
     chmod +x /tmp/aiden-runner && \
     rm -f aiden-runner.tar.gz
