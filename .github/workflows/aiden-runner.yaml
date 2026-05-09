@@ -29,7 +29,7 @@ jobs:
           - platform: linux/arm64
             runner: ubuntu-22.04-arm
             tag-suffix: -arm
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.runner }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
