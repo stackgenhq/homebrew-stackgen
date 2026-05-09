@@ -1,12 +1,12 @@
 {
-    "version": "0.1.22",
+    "version": "0.1.23",
     "architecture": {
         "64bit": {
-            "url": "https://releases.stackgen.com/binaries/aios-remote/v0.1.22/aiden-runner_0.1.22_windows_amd64.zip",
+            "url": "https://releases.stackgen.com/binaries/aios-remote/v0.1.23/aiden-runner_0.1.23_windows_amd64.zip",
             "bin": [
                 "aiden-runner.exe"
             ],
-            "hash": "a326049b6c4de6ad6fbfdbd57ce1bab7ccdc5510986ccec3941d65507d22685e"
+            "hash": "2a8f09034b8f6ff6c2f59d351ddc254e5c76638f52ff521098f4912c3c40185f"
         }
     },
     "homepage": "https://stackgen.com/",
