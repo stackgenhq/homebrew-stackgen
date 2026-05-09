@@ -25,10 +25,10 @@ jobs:
         include:
           - platform: linux/amd64
             runner: ubuntu-latest
-            tag-suffix: -amd
+            tag-suffix: -amd64
           - platform: linux/arm64
             runner: ubuntu-22.04-arm
-            tag-suffix: -arm
+            tag-suffix: -arm64
     runs-on: ${{ matrix.runner }}
     steps:
       - name: Checkout
@@ -93,11 +93,11 @@ jobs:
       - name: Create manifest
         run: |
           docker buildx imagetools create \
-            -t ghcr.io/stackgenhq/aiden-runner:latest \
-            ghcr.io/stackgenhq/aiden-runner:latest-amd \
-            ghcr.io/stackgenhq/aiden-runner:latest-arm
+            -t ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest \
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest-amd64 \
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest-arm64
 
           docker buildx imagetools create \
-            -t ghcr.io/stackgenhq/aiden-runner:${{ needs.build.outputs.version }} \
-            ghcr.io/stackgenhq/aiden-runner:${{ needs.build.outputs.version }}-amd \
-            ghcr.io/stackgenhq/aiden-runner:${{ needs.build.outputs.version }}-arm
+            -t ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ needs.build.outputs.version }} \
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ needs.build.outputs.version }}-amd64 \
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ needs.build.outputs.version }}-arm64
