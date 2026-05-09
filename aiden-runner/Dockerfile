@@ -22,8 +22,8 @@ RUN apk update && \
     rm -rf /var/cache/apk/* && \
     addgroup -S stackgen && adduser -S stackgen -G stackgen -u 1000 -h /home/stackgen
 
-USER stackgen
-
 COPY --from=download_binary --chown=stackgen:stackgen /tmp/aiden-runner /usr/local/bin/aiden-runner
+
+USER stackgen
 
 ENTRYPOINT ["/usr/local/bin/aiden-runner"]
