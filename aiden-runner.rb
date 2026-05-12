@@ -5,21 +5,21 @@
 class AidenRunner < Formula
   desc "StackGen AI Agent CLI"
   homepage "https://stackgen.com/"
-  version "0.1.26"
+  version "0.1.27"
   license "Apache License 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://releases.stackgen.com/binaries/aios-remote/v0.1.26/aiden-runner_0.1.26_darwin_amd64.tar.gz"
-      sha256 "9db48bbfad058fc1af5eb5e670da55480b345ee32a28b79ac9d1f5f9fa07e594"
+      url "https://releases.stackgen.com/binaries/aios-remote/v0.1.27/aiden-runner_0.1.27_darwin_amd64.tar.gz"
+      sha256 "e3453be83663135e5074a45a7ca0aeb4d28c3c1f9158f4e3ac077a12c082db0b"
 
       define_method(:install) do
         bin.install "aiden-runner"
       end
     end
     if Hardware::CPU.arm?
-      url "https://releases.stackgen.com/binaries/aios-remote/v0.1.26/aiden-runner_0.1.26_darwin_arm64.tar.gz"
-      sha256 "0ff1193b2d94b2cedf182b6cddd4faedd3b26b9cadf78ebdc2d6c52badc0d2d6"
+      url "https://releases.stackgen.com/binaries/aios-remote/v0.1.27/aiden-runner_0.1.27_darwin_arm64.tar.gz"
+      sha256 "f72c5e4cf335e66bfceb61efda8e2f7400dd6803097db8eedfb146f1ba3e69e2"
 
       define_method(:install) do
         bin.install "aiden-runner"
@@ -29,15 +29,15 @@ class AidenRunner < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://releases.stackgen.com/binaries/aios-remote/v0.1.26/aiden-runner_0.1.26_linux_amd64.tar.gz"
-      sha256 "a941ab4b21e69bb540c2b5aeb93107222d850280048165d66c0978e357176be5"
+      url "https://releases.stackgen.com/binaries/aios-remote/v0.1.27/aiden-runner_0.1.27_linux_amd64.tar.gz"
+      sha256 "b67bd983beb2c122c8e7fe56409ab07aab1c85060d515266cae5bbb3e76b4505"
       define_method(:install) do
         bin.install "aiden-runner"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.stackgen.com/binaries/aios-remote/v0.1.26/aiden-runner_0.1.26_linux_arm64.tar.gz"
-      sha256 "e482308ed4af65c5ba7fe2faff7d262c9f323d51c5a665abe6c2697105fb996b"
+      url "https://releases.stackgen.com/binaries/aios-remote/v0.1.27/aiden-runner_0.1.27_linux_arm64.tar.gz"
+      sha256 "c2e8db8f984345e89eb623cb576e8106140117fa843b31a7d807e744adb04034"
       define_method(:install) do
         bin.install "aiden-runner"
       end
