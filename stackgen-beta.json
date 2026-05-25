@@ -1,19 +1,19 @@
 {
-    "version": "0.79.0-rc.1",
+    "version": "0.79.1-rc.1",
     "architecture": {
         "64bit": {
-            "url": "https://releases.stackgen.com/binaries/stackgen-cli/rc/v0.79.0-rc.1/stackgen-beta_0.79.0-rc.1_windows_amd64.tar.gz",
+            "url": "https://releases.stackgen.com/binaries/stackgen-cli/rc/v0.79.1-rc.1/stackgen-beta_0.79.1-rc.1_windows_amd64.tar.gz",
             "bin": [
                 "stackgen-beta.exe"
             ],
-            "hash": "6b53bfd4ac1dced5148433578071f42593f3558b42b6e0da3375c968c872d901"
+            "hash": "9b85e5534c9a870e7f8ff2612fddd061a0d5d8263dff60a6cd5c9579c5f42f6d"
         },
         "arm64": {
-            "url": "https://releases.stackgen.com/binaries/stackgen-cli/rc/v0.79.0-rc.1/stackgen-beta_0.79.0-rc.1_windows_arm64.tar.gz",
+            "url": "https://releases.stackgen.com/binaries/stackgen-cli/rc/v0.79.1-rc.1/stackgen-beta_0.79.1-rc.1_windows_arm64.tar.gz",
             "bin": [
                 "stackgen-beta.exe"
             ],
-            "hash": "cb4ed50451f9a3f0d248978be10b81fd81da7f899832366fde6482bb4156803d"
+            "hash": "71a64b9648a600e356a882d59bc51ded7465f9b6f276b4d95da8b406ce41a611"
         }
     },
     "homepage": "https://stackgen.com/",
