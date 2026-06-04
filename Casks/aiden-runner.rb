@@ -4,11 +4,11 @@ cask "aiden-runner" do
 
   on_macos do
     on_intel do
-      sha256 "3fe5905b47278d109c436cb158a0e78d01a6007b47c84907ee570d5b769550c8"
+      sha256 "7fec3d78a194b452f039ac4c2f47218994aeb72fcb3386ccfd0100df82395c4a"
       url "https://releases.stackgen.com/binaries/aiden-runner/v#{version}/aiden-runner_#{version}_darwin_amd64.tar.gz"
     end
     on_arm do
-      sha256 "789b6c180854568b2aa586ac0650760a433b67a474e1446845a79b899ebaf0e4"
+      sha256 "27a66a38a7921a6b0ae0078c08f655f84044bd22616824430d5759c28c89e830"
       url "https://releases.stackgen.com/binaries/aiden-runner/v#{version}/aiden-runner_#{version}_darwin_arm64.tar.gz"
     end
   end
