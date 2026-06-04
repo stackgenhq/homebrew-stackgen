@@ -11,7 +11,7 @@ class AidenRunner < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://releases.stackgen.com/binaries/aiden-runner/v0.1.37/aiden-runner_0.1.37_darwin_amd64.tar.gz"
-      sha256 "3fe5905b47278d109c436cb158a0e78d01a6007b47c84907ee570d5b769550c8"
+      sha256 "7fec3d78a194b452f039ac4c2f47218994aeb72fcb3386ccfd0100df82395c4a"
 
       define_method(:install) do
         bin.install "aiden-runner"
@@ -19,7 +19,7 @@ class AidenRunner < Formula
     end
     if Hardware::CPU.arm?
       url "https://releases.stackgen.com/binaries/aiden-runner/v0.1.37/aiden-runner_0.1.37_darwin_arm64.tar.gz"
-      sha256 "789b6c180854568b2aa586ac0650760a433b67a474e1446845a79b899ebaf0e4"
+      sha256 "27a66a38a7921a6b0ae0078c08f655f84044bd22616824430d5759c28c89e830"
 
       define_method(:install) do
         bin.install "aiden-runner"
@@ -30,14 +30,14 @@ class AidenRunner < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://releases.stackgen.com/binaries/aiden-runner/v0.1.37/aiden-runner_0.1.37_linux_amd64.tar.gz"
-      sha256 "e761eaed87f03a5f03b7fb7a512432d7628065155ca168ffd796408f55580f46"
+      sha256 "f108cff3dc942fba60fcf93ee9f9ad62f5ffd1f3cbd505966e811da9bd8c76f1"
       define_method(:install) do
         bin.install "aiden-runner"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://releases.stackgen.com/binaries/aiden-runner/v0.1.37/aiden-runner_0.1.37_linux_arm64.tar.gz"
-      sha256 "e5c596c8188c1d648437e7618ba2aea94acc08f9f6e7bcdc137d703a2bc97056"
+      sha256 "6f3fe46f80795626854ade91edec71e2e3d88a7bb8d981c8f913a4c5bb8e85ac"
       define_method(:install) do
         bin.install "aiden-runner"
       end
