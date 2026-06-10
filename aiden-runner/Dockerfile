@@ -9,7 +9,7 @@ RUN apk update && \
     apk add --no-cache curl && \
     rm -rf /var/cache/apk/*
 
-RUN URL="https://releases.stackgen.com/binaries/aios-remote/v${AIDEN_RUNNER_VERSION}/aiden-runner_${AIDEN_RUNNER_VERSION}_${TARGETOS}_${TARGETARCH}.tar.gz" && \
+RUN URL="https://releases.stackgen.com/binaries/aiden-runner/v${AIDEN_RUNNER_VERSION}/aiden-runner_${AIDEN_RUNNER_VERSION}_${TARGETOS}_${TARGETARCH}.tar.gz" && \
     curl -fsSL -o aiden-runner.tar.gz "$URL" || { echo "Error: failed to download aiden-runner from $URL" >&2; exit 1; } && \
     tar -xzf aiden-runner.tar.gz && \
     test -f aiden-runner || { echo "Error: extracted archive does not contain aiden-runner binary" >&2; exit 1; } && \
