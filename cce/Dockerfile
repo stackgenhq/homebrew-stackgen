@@ -1,12 +1,12 @@
-FROM alpine AS download_binary
+FROM debian:bookworm-slim AS download_binary
 
 ARG CCE_VERSION
-ARG TARGETOS
+ARG TARGETOS=linux
 ARG TARGETARCH
 
-RUN apk update && \
-    apk add --no-cache curl && \
-    rm -rf /var/cache/apk/*
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends curl ca-certificates && \
+    rm -rf /var/lib/apt/lists/*
 
 RUN URL="https://releases.stackgen.com/binaries/cce/v${CCE_VERSION}/cce_${CCE_VERSION}_${TARGETOS}_${TARGETARCH}.tar.gz" && \
     curl -fsSL -o cce.tar.gz "$URL" || { echo "Error: failed to download cce from $URL" >&2; exit 1; } && \
@@ -16,12 +16,13 @@ RUN URL="https://releases.stackgen.com/binaries/cce/v${CCE_VERSION}/cce_${CCE_VE
     chmod +x /tmp/cce && \
     rm -f cce.tar.gz
 
-FROM alpine:latest
+FROM debian:bookworm-slim
 
-RUN apk update && \
-    apk add --no-cache ca-certificates git && \
-    rm -rf /var/cache/apk/* && \
-    addgroup -S stackgen && adduser -S stackgen -G stackgen -u 1000 -h /home/stackgen
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends ca-certificates git && \
+    rm -rf /var/lib/apt/lists/* && \
+    groupadd --system --gid 1000 stackgen && \
+    useradd --system --uid 1000 --gid stackgen --home-dir /home/stackgen --create-home stackgen
 
 COPY --from=download_binary --chown=stackgen:stackgen /tmp/cce /usr/local/bin/cce
 
