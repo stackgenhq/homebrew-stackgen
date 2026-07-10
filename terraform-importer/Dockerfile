@@ -22,6 +22,7 @@ RUN apk update && \
     addgroup -S stackgen && adduser -S stackgen -G stackgen -u 1000 -h /home/stackgen
 
 USER stackgen
+WORKDIR /home/stackgen/tf
 
 COPY --from=download_binary --chown=stackgen:stackgen /tmp/terraform-importer /usr/local/bin/terraform-importer
 
