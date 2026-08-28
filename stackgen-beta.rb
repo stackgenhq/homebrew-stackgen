@@ -5,21 +5,21 @@
 class StackgenBeta < Formula
   desc "Generative Infrastructure from Code"
   homepage "https://stackgen.com/"
-  version "0.82.1-rc.1"
+  version "0.82.1-rc.2"
   license "Apache License 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://releases.stackgen.com/binaries/stackgen-cli/rc/v0.82.1-rc.1/stackgen-beta_0.82.1-rc.1_darwin_amd64.tar.gz"
-      sha256 "39faacb08b942ffbbb44c1edd084934fcf315178ce727071c16d5de2c3046c3a"
+      url "https://releases.stackgen.com/binaries/stackgen-cli/rc/v0.82.1-rc.2/stackgen-beta_0.82.1-rc.2_darwin_amd64.tar.gz"
+      sha256 "8147befd98d7839974d6db71b36e10e1578fc9cc7099ecca4e14d7143a3f61b5"
 
       define_method(:install) do
         bin.install "stackgen-beta"
       end
     end
     if Hardware::CPU.arm?
-      url "https://releases.stackgen.com/binaries/stackgen-cli/rc/v0.82.1-rc.1/stackgen-beta_0.82.1-rc.1_darwin_arm64.tar.gz"
-      sha256 "c861dbdb0808b0c4b37a09249423636762eae5eda3e3d4d2819029fce3b3d8ae"
+      url "https://releases.stackgen.com/binaries/stackgen-cli/rc/v0.82.1-rc.2/stackgen-beta_0.82.1-rc.2_darwin_arm64.tar.gz"
+      sha256 "9b95efd468fb9dc3eaed40b38e6a77e00b99f6ed3d6fa27a4bd721a80ef7b815"
 
       define_method(:install) do
         bin.install "stackgen-beta"
@@ -29,15 +29,15 @@ class StackgenBeta < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://releases.stackgen.com/binaries/stackgen-cli/rc/v0.82.1-rc.1/stackgen-beta_0.82.1-rc.1_linux_amd64.tar.gz"
-      sha256 "de8820f135409fc202bf76bad3b595093765f2750daee9e1ead51954511beea1"
+      url "https://releases.stackgen.com/binaries/stackgen-cli/rc/v0.82.1-rc.2/stackgen-beta_0.82.1-rc.2_linux_amd64.tar.gz"
+      sha256 "b125de616f858616f75dd468a4513eb71f99b8af8ada20508133b64e994fac36"
       define_method(:install) do
         bin.install "stackgen-beta"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.stackgen.com/binaries/stackgen-cli/rc/v0.82.1-rc.1/stackgen-beta_0.82.1-rc.1_linux_arm64.tar.gz"
-      sha256 "2ba31b0f7efafc5afb6c72e0cfee96e4aa299763ec753291207fc74f47d53f54"
+      url "https://releases.stackgen.com/binaries/stackgen-cli/rc/v0.82.1-rc.2/stackgen-beta_0.82.1-rc.2_linux_arm64.tar.gz"
+      sha256 "779d9706bf5ae0f340e5493e5b633ed808f1b68e0cbda482fa8ef6d2deb0d8cd"
       define_method(:install) do
         bin.install "stackgen-beta"
       end
