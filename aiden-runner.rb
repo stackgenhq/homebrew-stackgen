@@ -5,21 +5,21 @@
 class AidenRunner < Formula
   desc "StackGen AI Agent CLI"
   homepage "https://stackgen.com/"
-  version "0.2.18"
+  version "0.2.19"
   license "Apache License 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://releases.stackgen.com/binaries/aiden-runner/v0.2.18/aiden-runner_0.2.18_darwin_amd64.tar.gz"
-      sha256 "2d9a028a7cf6cfa7d9cf52c9c968136a61d4e5573551d08c3f8bf404b4effbba"
+      url "https://releases.stackgen.com/binaries/aiden-runner/v0.2.19/aiden-runner_0.2.19_darwin_amd64.tar.gz"
+      sha256 "2b69a6166fe2cd6f42c12862706a666e8882ecc29e2a16758591aabd40307389"
 
       define_method(:install) do
         bin.install "aiden-runner"
       end
     end
     if Hardware::CPU.arm?
-      url "https://releases.stackgen.com/binaries/aiden-runner/v0.2.18/aiden-runner_0.2.18_darwin_arm64.tar.gz"
-      sha256 "6bed6f3e4ae3eda639d70be551e3813b0542c46719e5a7ac376321f35b78b9b7"
+      url "https://releases.stackgen.com/binaries/aiden-runner/v0.2.19/aiden-runner_0.2.19_darwin_arm64.tar.gz"
+      sha256 "00185b4ab94bf5b37b5c302f979c87d1f4cfdd2e992169cbb2967144d8d2c391"
 
       define_method(:install) do
         bin.install "aiden-runner"
@@ -29,15 +29,15 @@ class AidenRunner < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://releases.stackgen.com/binaries/aiden-runner/v0.2.18/aiden-runner_0.2.18_linux_amd64.tar.gz"
-      sha256 "06559bb524997eddf46ba6352687837b640a90d26cb4714ec519919b98f4b40b"
+      url "https://releases.stackgen.com/binaries/aiden-runner/v0.2.19/aiden-runner_0.2.19_linux_amd64.tar.gz"
+      sha256 "00d8107b10018a309a6c4c9df95983adad5d427c81557b69e64a2c81378e9a66"
       define_method(:install) do
         bin.install "aiden-runner"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.stackgen.com/binaries/aiden-runner/v0.2.18/aiden-runner_0.2.18_linux_arm64.tar.gz"
-      sha256 "d5358d9a7c2dc0940acc0cbcea8a26ac9ae0be28e8d669b6f7e937cf4640baf0"
+      url "https://releases.stackgen.com/binaries/aiden-runner/v0.2.19/aiden-runner_0.2.19_linux_arm64.tar.gz"
+      sha256 "4aab380bc3b068703e700e0f4c1fe15ed16c8bf7dd8bdb7c5304de2472d88611"
       define_method(:install) do
         bin.install "aiden-runner"
       end
