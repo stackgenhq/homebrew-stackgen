@@ -5,21 +5,21 @@
 class Cloud2code < Formula
   desc "Convert your cloud resources to tfstate files"
   homepage "https://stackgen.com/"
-  version "0.5.1"
+  version "0.5.2"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://releases.stackgen.com/binaries/cloud2code/v0.5.1/cloud2code_0.5.1_darwin_amd64.tar.gz"
-      sha256 "d3e2c5f37a706672a78c40ae8fca5f45da02fe754456bbb230bec6702dbdace9"
+      url "https://releases.stackgen.com/binaries/cloud2code/v0.5.2/cloud2code_0.5.2_darwin_amd64.tar.gz"
+      sha256 "e27d1028a8ba48e7d358452d5060115f0ad3bd00347cbe4c305d9450c904c2a5"
 
       define_method(:install) do
         bin.install "cloud2code"
       end
     end
     if Hardware::CPU.arm?
-      url "https://releases.stackgen.com/binaries/cloud2code/v0.5.1/cloud2code_0.5.1_darwin_arm64.tar.gz"
-      sha256 "b47cb163c3c41fad6b79f4c4c03e9644740b284f43d698adf1883bc03a77ebc9"
+      url "https://releases.stackgen.com/binaries/cloud2code/v0.5.2/cloud2code_0.5.2_darwin_arm64.tar.gz"
+      sha256 "e1594dfe81387ad1868c06fcb4addb6538a4b2c8b27caa4182d0e87300f174c0"
 
       define_method(:install) do
         bin.install "cloud2code"
@@ -29,15 +29,15 @@ class Cloud2code < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://releases.stackgen.com/binaries/cloud2code/v0.5.1/cloud2code_0.5.1_linux_amd64.tar.gz"
-      sha256 "371aa0447be8ca089fa2a8488c5740866a0360855feb41efea350b22763613b5"
+      url "https://releases.stackgen.com/binaries/cloud2code/v0.5.2/cloud2code_0.5.2_linux_amd64.tar.gz"
+      sha256 "04bb2f7a275285d07cb243f4921de8ced453a81e9d8eaed87940cfc9ce6d235a"
       define_method(:install) do
         bin.install "cloud2code"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.stackgen.com/binaries/cloud2code/v0.5.1/cloud2code_0.5.1_linux_arm64.tar.gz"
-      sha256 "6b1a986c94dd699851895367fe9c7db40694f2d913508c0fb8857e6411db6890"
+      url "https://releases.stackgen.com/binaries/cloud2code/v0.5.2/cloud2code_0.5.2_linux_arm64.tar.gz"
+      sha256 "4f995b6e1c812a7d2a2b33c2b7cee5d0af194502d09d26e2282a44ec9b8fb2b2"
       define_method(:install) do
         bin.install "cloud2code"
       end
