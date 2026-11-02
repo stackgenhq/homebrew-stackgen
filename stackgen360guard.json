@@ -1,12 +1,12 @@
 {
-    "version": "0.0.2",
+    "version": "0.1.0",
     "architecture": {
         "64bit": {
-            "url": "https://releases.stackgen.com/binaries/stackgen360guard/v0.0.2/stackgen360guard_0.0.2_windows_amd64.zip",
+            "url": "https://releases.stackgen.com/binaries/stackgen360guard/v0.1.0/stackgen360guard_0.1.0_windows_amd64.zip",
             "bin": [
                 "stackgen360guard.exe"
             ],
-            "hash": "36ab30de064d2aec8ce53b4538a7bedab228b31fd203c3f534880e895bd96e8a"
+            "hash": "810adffad7d36902659e8716431e6fc21b935b4c4863fa4e73ee8fd0bbccfea7"
         }
     },
     "homepage": "https://stackgen.com/",
