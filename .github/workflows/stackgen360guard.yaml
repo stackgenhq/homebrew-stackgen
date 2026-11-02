@@ -1,0 +1,134 @@
+# Build the container image when GoReleaser updates the formula.
+name: stackgen360guard
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - stackgen360guard.rb
+      - stackgen360guard/Dockerfile
+      - .github/workflows/stackgen360guard.yaml
+  pull_request:
+    paths:
+      - stackgen360guard.rb
+      - stackgen360guard/Dockerfile
+      - .github/workflows/stackgen360guard.yaml
+  workflow_dispatch:
+
+concurrency:
+  group: stackgen360guard-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: stackgenhq/stackgen360guard
+
+jobs:
+  build:
+    outputs:
+      version: ${{ steps.version.outputs.VERSION }}
+    permissions:
+      contents: read
+      packages: write
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - platform: linux/amd64
+            runner: ubuntu-latest
+            tag-suffix: -amd64
+          - platform: linux/arm64
+            runner: ubuntu-22.04-arm
+            tag-suffix: -arm64
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          sparse-checkout: |
+            stackgen360guard
+            stackgen360guard.rb
+
+      - name: Get stackgen360guard version
+        id: version
+        run: |
+          VERSION="$(awk '$1 == "version" { print $2; exit }' stackgen360guard.rb | tr -d '"')"
+          echo "$VERSION" | grep -Eq '^[0-9]+\.[0-9]+\.[0-9]+$' || { echo "Invalid stable release version: $VERSION"; exit 1; }
+          echo "VERSION=$VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=raw,value=${{ steps.version.outputs.VERSION }}
+            type=raw,value=latest
+          flavor: |
+            suffix=${{ matrix.tag-suffix }},onlatest=true
+
+      - name: Log in to the Container registry
+        if: github.event_name != 'pull_request'
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Docker Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: ./stackgen360guard
+          platforms: ${{ matrix.platform }}
+          tags: ${{ steps.meta.outputs.tags }}
+          load: true
+          push: ${{ github.event_name != 'pull_request' }}
+          provenance: false
+          labels: ${{ steps.meta.outputs.labels }}
+          build-args: |
+            STACKGEN360GUARD_VERSION=${{ steps.version.outputs.VERSION }}
+
+      - name: Smoke-test image
+        env:
+          VERSION: ${{ steps.version.outputs.VERSION }}
+          TAG_SUFFIX: ${{ matrix.tag-suffix }}
+        run: |
+          IMAGE="${REGISTRY}/${IMAGE_NAME}:${VERSION}${TAG_SUFFIX}"
+          docker run --rm "$IMAGE" version | jq -e --arg version "$VERSION" '.version == $version'
+          docker run --rm --entrypoint /bin/sh "$IMAGE" -c \
+            'test "$(id -u)" -eq 1000 && test ! -e /migrations'
+
+  create_manifest:
+    name: Create manifest
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    needs: build
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to the Container registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create manifest
+        env:
+          VERSION: ${{ needs.build.outputs.version }}
+        run: |
+          IMAGE="${REGISTRY}/${IMAGE_NAME}"
+          docker buildx imagetools create \
+            -t "${IMAGE}:${VERSION}" \
+            -t "${IMAGE}:latest" \
+            "${IMAGE}:${VERSION}-amd64" \
+            "${IMAGE}:${VERSION}-arm64"

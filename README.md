@@ -34,6 +34,7 @@ Install StackGen's CLI and tools via [Homebrew](https://brew.sh).
 | **stackgen** | Main CLI — Generative Infrastructure from Code | `brew install stackgenhq/homebrew-stackgen/stackgen` |
 | **stackgen-beta** | StackGen CLI (beta/RC releases) | `brew install stackgenhq/homebrew-stackgen/stackgen-beta` |
 | **stackgen-slo** | SLO app — Generative Infrastructure from Code | `brew install stackgenhq/homebrew-stackgen/stackgen-slo` |
+| **stackgen360guard** | IaC security and compliance scanner powered by OPA | `brew install stackgenhq/homebrew-stackgen/stackgen360guard` |
 | **terraform-importer** | Parse Terraform IaC and import into Stackgen | `brew install stackgenhq/homebrew-stackgen/terraform-importer` |
 | **cloud2code** | Convert cloud resources to tfstate files | `brew install stackgenhq/homebrew-stackgen/cloud2code` |
 | **cloud2code-beta** | Cloud2code (beta/RC releases) | `brew install stackgenhq/homebrew-stackgen/cloud2code-beta` |
