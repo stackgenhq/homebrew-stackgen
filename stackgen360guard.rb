@@ -5,12 +5,12 @@
 class Stackgen360guard < Formula
   desc "IaC security and compliance scanner powered by OPA"
   homepage "https://stackgen.com/"
-  version "0.0.2"
+  version "0.1.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://releases.stackgen.com/binaries/stackgen360guard/v0.0.2/stackgen360guard_0.0.2_darwin_amd64.tar.gz"
-      sha256 "933af7fbefce72d26cc4ba322f0bf6d558d844ceb2735a22967055920584b1e5"
+      url "https://releases.stackgen.com/binaries/stackgen360guard/v0.1.0/stackgen360guard_0.1.0_darwin_amd64.tar.gz"
+      sha256 "728f3e992bd59e90994a1aca5669a01a2f3760e52aa6059280ab1517177a70ac"
 
       def install
         bin.install "stackgen360guard"
@@ -18,8 +18,8 @@ class Stackgen360guard < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://releases.stackgen.com/binaries/stackgen360guard/v0.0.2/stackgen360guard_0.0.2_darwin_arm64.tar.gz"
-      sha256 "045fe110dd4f12fc79dd8dfa86a29b1395e412b9d6161c1d089d42e3b2f25ee7"
+      url "https://releases.stackgen.com/binaries/stackgen360guard/v0.1.0/stackgen360guard_0.1.0_darwin_arm64.tar.gz"
+      sha256 "4d71abafa0f1c31aa5844fcc5a39514a35de066929fbe00881134f1bc31c7d6b"
 
       def install
         bin.install "stackgen360guard"
@@ -30,16 +30,16 @@ class Stackgen360guard < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://releases.stackgen.com/binaries/stackgen360guard/v0.0.2/stackgen360guard_0.0.2_linux_amd64.tar.gz"
-      sha256 "eb262463662e7e3a546c3ce9130e6deeaf72e5dc61fb2d51d32bfeda864c7bb7"
+      url "https://releases.stackgen.com/binaries/stackgen360guard/v0.1.0/stackgen360guard_0.1.0_linux_amd64.tar.gz"
+      sha256 "6378f33fb6c25a7484396d1c3e64e258fda896687f100cc7afbd485e406e6d91"
       def install
         bin.install "stackgen360guard"
         pkgshare.install "migrations"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://releases.stackgen.com/binaries/stackgen360guard/v0.0.2/stackgen360guard_0.0.2_linux_arm64.tar.gz"
-      sha256 "67cc7d617a03b20c73e7759f6a52f3fa17f00627e9014243b9f9dbec7c1607d4"
+      url "https://releases.stackgen.com/binaries/stackgen360guard/v0.1.0/stackgen360guard_0.1.0_linux_arm64.tar.gz"
+      sha256 "7780afddf6972c15a7f756bce01f5d6c0828de51a43e50c27e4ed9a69feab1dd"
       def install
         bin.install "stackgen360guard"
         pkgshare.install "migrations"
