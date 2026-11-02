@@ -2,7 +2,7 @@
 cask "stackgen360guard" do
   desc "IaC security and compliance scanner powered by OPA"
   homepage "https://stackgen.com/"
-  version "0.0.2"
+  version "0.1.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,12 +12,12 @@ cask "stackgen360guard" do
 
   on_macos do
     on_intel do
-      url "https://releases.stackgen.com/binaries/stackgen360guard/v0.0.2/stackgen360guard_0.0.2_darwin_amd64.tar.gz"
-      sha256 "933af7fbefce72d26cc4ba322f0bf6d558d844ceb2735a22967055920584b1e5"
+      url "https://releases.stackgen.com/binaries/stackgen360guard/v0.1.0/stackgen360guard_0.1.0_darwin_amd64.tar.gz"
+      sha256 "728f3e992bd59e90994a1aca5669a01a2f3760e52aa6059280ab1517177a70ac"
     end
     on_arm do
-      url "https://releases.stackgen.com/binaries/stackgen360guard/v0.0.2/stackgen360guard_0.0.2_darwin_arm64.tar.gz"
-      sha256 "045fe110dd4f12fc79dd8dfa86a29b1395e412b9d6161c1d089d42e3b2f25ee7"
+      url "https://releases.stackgen.com/binaries/stackgen360guard/v0.1.0/stackgen360guard_0.1.0_darwin_arm64.tar.gz"
+      sha256 "4d71abafa0f1c31aa5844fcc5a39514a35de066929fbe00881134f1bc31c7d6b"
     end
   end
 
