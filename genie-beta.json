@@ -1,0 +1,15 @@
+{
+    "version": "0.1.10-rc.1",
+    "architecture": {
+        "64bit": {
+            "url": "https://releases.stackgen.com/binaries/genie-beta/v0.1.10-rc.1/genie_0.1.10-rc.1_windows_amd64.zip",
+            "bin": [
+                "genie-beta.exe"
+            ],
+            "hash": "d710c0b8d4b3180f2c84ce635b1d45c578aec04b4ba026126dc14bfcd5a8e615"
+        }
+    },
+    "homepage": "https://stackgen.com/",
+    "license": "Apache License 2.0",
+    "description": "Generative Infrastructure from Code"
+}
