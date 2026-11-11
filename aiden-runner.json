@@ -1,12 +1,12 @@
 {
-    "version": "0.8.4",
+    "version": "0.8.5",
     "architecture": {
         "64bit": {
-            "url": "https://releases.stackgen.com/binaries/aiden-runner/v0.8.4/aiden-runner_0.8.4_windows_amd64.zip",
+            "url": "https://releases.stackgen.com/binaries/aiden-runner/v0.8.5/aiden-runner_0.8.5_windows_amd64.zip",
             "bin": [
                 "aiden-runner.exe"
             ],
-            "hash": "33b3e8f88bee751dd35b7a5ae86db6b2241510242594f35e8a76ac3384b5c205"
+            "hash": "d4fb5794293c8aa9d22caec44e6391acb2d1fe87b978d0a726210a8598722e7b"
         }
     },
     "homepage": "https://stackgen.com/",
