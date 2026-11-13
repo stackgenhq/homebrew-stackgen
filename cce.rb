@@ -5,21 +5,21 @@
 class Cce < Formula
   desc "Extract cloud SDK usage from source code with tree-sitter"
   homepage "https://github.com/appcd-dev/cce"
-  version "0.0.37"
+  version "0.0.38"
   license "Apache License 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://releases.stackgen.com/binaries/cce/v0.0.37/cce_0.0.37_darwin_amd64.tar.gz"
-      sha256 "f1ecb6bdafa9eac10784db29656c96ce5b988e85a5d1bc08bb6470ca273ffd13"
+      url "https://releases.stackgen.com/binaries/cce/v0.0.38/cce_0.0.38_darwin_amd64.tar.gz"
+      sha256 "e1c525e0d0d270e4fe72579881ef4a5d32345b2e72ba4f132c8e860a5c752953"
 
       define_method(:install) do
         bin.install "cce"
       end
     end
     if Hardware::CPU.arm?
-      url "https://releases.stackgen.com/binaries/cce/v0.0.37/cce_0.0.37_darwin_arm64.tar.gz"
-      sha256 "dba7cfccb6db2bda681b92b6a62522d06c20c523d39176843ca9f5bcb8027b86"
+      url "https://releases.stackgen.com/binaries/cce/v0.0.38/cce_0.0.38_darwin_arm64.tar.gz"
+      sha256 "99c446f012d44d826add9abc569b231aa4e09d1f9c00a36a31592b8227ee861f"
 
       define_method(:install) do
         bin.install "cce"
@@ -29,15 +29,15 @@ class Cce < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://releases.stackgen.com/binaries/cce/v0.0.37/cce_0.0.37_linux_amd64.tar.gz"
-      sha256 "f7413434e1917c76a9f4fe9cd86dbd8a1941e9d605d2d939de820dead4d17384"
+      url "https://releases.stackgen.com/binaries/cce/v0.0.38/cce_0.0.38_linux_amd64.tar.gz"
+      sha256 "2f00671219ea40d672cc94e7ef1e475f3303dc861a60bb29e7357df448bd9529"
       define_method(:install) do
         bin.install "cce"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.stackgen.com/binaries/cce/v0.0.37/cce_0.0.37_linux_arm64.tar.gz"
-      sha256 "6978729794ec1b9c6a40563913c51b31d8730758a769f259324d179f1ff7dbb8"
+      url "https://releases.stackgen.com/binaries/cce/v0.0.38/cce_0.0.38_linux_arm64.tar.gz"
+      sha256 "559c6ba9e49c15e50b6577da80767f159058461529cdaf64f8faeb2e582d66ad"
       define_method(:install) do
         bin.install "cce"
       end
